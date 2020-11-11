@@ -2,9 +2,9 @@
 title: Utveckla för [!DNL Asset Compute Service].
 description: Skapa anpassade program med [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 127895cf1bab59546f9ba0be2b3b7a935627effb
+source-git-commit: 6de4e3cde9c38f2e23838f5d728dae23e15d2147
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1559'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Kontrollera att [Adobe I/O CLI](https://github.com/adobe/aio-cli) är installera
 
    Läs här om [huvudkomponenterna i en Fireworks-app](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application).
 
-   Mallapplikationen utnyttjar vår SDK för [tillgångsberäkning](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) för att ladda upp, ladda ned och organisera programåtergivningar så att utvecklarna bara behöver implementera den anpassade programlogiken. I `actions/<worker-name>` mappen finns den plats där den anpassade programkoden ska läggas till i `index.js` filen.
+   Mallapplikationen utnyttjar vår [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) för att ladda upp, ladda ned och organisera programåtergivningar så att utvecklarna bara behöver implementera den anpassade programlogiken. I `actions/<worker-name>` mappen finns den plats där den anpassade programkoden ska läggas till i `index.js` filen.
 
 Se [exempel på anpassade program](#try-sample) för exempel och idéer på anpassade program.
 
@@ -82,7 +82,7 @@ Utvecklarverktyget som används för att testa anpassade program med det faktisk
 
 >[!NOTE]
 >
->Detta är skilt från molnlagringen av [!DNL Adobe Experience Manager] som en Cloud Service. Det gäller endast för utveckling och testning med utvecklingsverktyget för beräkning av tillgångar.
+>Detta är skilt från molnlagringen av [!DNL Adobe Experience Manager] som en Cloud Service. Det gäller endast för utveckling och testning med utvecklingsverktyget Asset compute.
 
 Kontrollera att du har tillgång till en molnlagringsbehållare [som](https://github.com/adobe/asset-compute-devtool#prerequisites)stöds. Den här behållaren kan delas av flera utvecklare i olika projekt efter behov.
 
@@ -96,7 +96,13 @@ Lägg till följande inloggningsuppgifter för utvecklingsverktyget i ENV-filen 
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
    ```
 
-1. Lägg till autentiseringsuppgifter för S3 eller Azure Storage. Du behöver bara tillgång till en molnlagringslösning.
+1. Om sökvägen inte `console.json` finns i roten direkt i din Fireworks-app lägger du till den absoluta sökvägen till JSON-filen för integrering med Adobe Developer Console. Det här är samma [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user) fil som hämtas på din projektarbetsyta. Du kan också använda kommandot i stället `aio app use <path_to_console_json>` för att lägga till sökvägen till ENV-filen.
+
+   ```conf
+   ASSET_COMPUTE_INTEGRATION_FILE_PATH=
+   ```
+
+1. Lägg till autentiseringsuppgifter för S3 eller Azure-lagring. Du behöver bara tillgång till en molnlagringslösning.
 
    ```conf
    # S3 credentials
@@ -113,7 +119,7 @@ Lägg till följande inloggningsuppgifter för utvecklingsverktyget i ENV-filen 
 
 ## Kör programmet {#run-custom-application}
 
-Konfigurera [autentiseringsuppgifterna](#developer-tool-credentials)korrekt innan du kör programmet med verktyget Resursberäkning.
+Innan du kör programmet med utvecklingsverktyget i Asset compute måste du konfigurera [autentiseringsuppgifterna](#developer-tool-credentials)korrekt.
 
 Om du vill köra programmet i utvecklingsverktyget använder du `aio app run` kommando. Den distribuerar åtgärden till Adobe I/O Runtime och startar utvecklingsverktyget på den lokala datorn. Det här verktyget används för att testa programbegäranden under utveckling. Här är ett exempel på en renderingsförfrågan:
 
@@ -128,7 +134,7 @@ Om du vill köra programmet i utvecklingsverktyget använder du `aio app run` ko
 
 >[!NOTE]
 >
->Använd inte `--local` flaggan med `run` kommandot. Det fungerar inte med [!DNL Asset Compute] anpassade program och verktyget Resursberäknare. Anpassade program anropas av [!DNL Asset Compute Service] som inte har åtkomst till åtgärder som körs på utvecklarens lokala datorer.
+>Använd inte `--local` flaggan med `run` kommandot. Det fungerar inte med [!DNL Asset Compute] anpassade program och utvecklingsverktyget i Asset compute. Anpassade program anropas av [!DNL Asset Compute Service] som inte har åtkomst till åtgärder som körs på utvecklarens lokala datorer.
 
 Se [här](test-custom-application.md) hur du testar och felsöker programmet. När du är klar med utvecklingen av ditt anpassade program ska du [distribuera ditt anpassade program](deploy-custom-application.md).
 
@@ -208,7 +214,7 @@ Den `example-worker-animal-pictures` skickar en anpassad parameter [`animal`](ht
 
 ## Stöd för autentisering och auktorisering {#authentication-authorization-support}
 
-Som standard levereras anpassade program för tillgångsberäkning med behörighets- och autentiseringskontroller för felsökningsprogram. Detta aktiveras genom att `require-adobe-auth` anteckningen ställs in på `true` i `manifest.yml`.
+Som standard innehåller anpassade Asset compute-program autentisering och autentisering för Fireworks-program. Detta aktiveras genom att `require-adobe-auth` anteckningen ställs in på `true` i `manifest.yml`.
 
 ### Åtkomst till andra Adobe-API:er {#access-adobe-apis}
 
@@ -272,14 +278,14 @@ Ett program körs i en behållare i Adobe I/O Runtime med [begränsningar](https
           concurrency: 1
 ```
 
-På grund av den mer omfattande bearbetning som vanligtvis utförs av program för tillgångsberäkning är det mer sannolikt att man måste justera dessa gränser för optimala prestanda (tillräckligt stor för att hantera binära resurser) och effektivitet (inte slösa resurser på grund av oanvänt behållarminne).
+På grund av den mer omfattande bearbetning som vanligtvis utförs av Asset compute-program är det troligare att man måste justera dessa gränsvärden för optimala prestanda (tillräckligt stor för att hantera binära resurser) och effektivitet (inte slösa resurser på grund av oanvänt behållarminne).
 
 Standardtidsgränsen för åtgärder i körtid är en minut, men den kan ökas genom att `timeout` gränsen anges (i millisekunder). Om du förväntar dig att bearbeta större filer ökar du den här tiden. Tänk på hur lång tid det tar att hämta källan, bearbeta filen och överföra återgivningen. Om en åtgärd gör timeout, d.v.s. inte returnerar aktiveringen före den angivna tidsgränsen, ignoreras behållaren och återanvänds inte.
 
-Tillgångsberäkningsprogram brukar vara nätverks- och disk-I/O-bundna. Källfilen måste hämtas först, bearbetningen är ofta IO-tung och sedan överförs återgivningarna igen.
+Asset compute-applikationer är till sin natur ofta nätverks- och disk-I/O-bundna. Källfilen måste hämtas först, bearbetningen är ofta IO-tung och sedan överförs återgivningarna igen.
 
 Minnet som är tillgängligt för en åtgärdsbehållare anges av `memorySize` MB. För närvarande definierar detta även hur mycket processoråtkomst behållaren får, och viktigast av allt är det en viktig del av kostnaden för att använda körningsversionen (större behållare kostar mer). Använd ett större värde här när bearbetningen kräver mer minne eller processorkapacitet, men var noga med att inte slösa bort resurser eftersom ju större behållare det är, desto lägre blir den totala genomströmningen.
 
-Dessutom är det möjligt att styra åtgärdssamtidighet i en behållare med hjälp av `concurrency` inställningen. Detta är antalet samtidiga aktiveringar som en enskild behållare (av samma åtgärd) får. I den här modellen fungerar åtgärdsbehållaren som en Node.js-server som tar emot flera samtidiga begäranden, upp till den gränsen. Om den inte anges är standardvärdet 200, vilket är bra för mindre Firefoly-åtgärder, men vanligtvis för stort för Asset Compute-program med tanke på deras mer intensiva lokala bearbetning och diskaktivitet. Vissa program kanske inte fungerar bra med samtidig aktivitet beroende på implementering. SDK:n för beräkning av tillgångar ser till att aktiveringarna separeras genom att filer skrivs till olika unika mappar.
+Dessutom är det möjligt att styra åtgärdssamtidighet i en behållare med hjälp av `concurrency` inställningen. Detta är antalet samtidiga aktiveringar som en enskild behållare (av samma åtgärd) får. I den här modellen fungerar åtgärdsbehållaren som en Node.js-server som tar emot flera samtidiga begäranden, upp till den gränsen. Om den inte anges är standardvärdet 200, vilket är bra för mindre Fireworks-åtgärder, men vanligtvis för stort för Asset compute-program med tanke på deras mer intensiva lokala bearbetning och diskaktivitet. Vissa program kanske inte fungerar bra med samtidig aktivitet beroende på implementering. Asset compute SDK säkerställer att aktiveringarna separeras genom att filer skrivs till olika unika mappar.
 
 Testa program för att hitta de optimala siffrorna för `concurrency` och `memorySize`. Större behållare = högre minnesgräns kan möjliggöra mer samtidighet men kan också vara onödigt för lägre trafik.
