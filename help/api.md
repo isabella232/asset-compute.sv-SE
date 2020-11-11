@@ -2,9 +2,9 @@
 title: '[!DNL Asset Compute Service] HTTP API.'
 description: '[!DNL Asset Compute Service] HTTP API för att skapa anpassade program.'
 translation-type: tm+mt
-source-git-commit: 18e97e544014933e9910a12bc40246daa445bf4f
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
-source-wordcount: '2931'
+source-wordcount: '2925'
 ht-degree: 1%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # [!DNL Asset Compute Service] HTTP-API {#asset-compute-http-api}
 
-API:t används endast i utvecklingssyfte. API:t anges som ett sammanhang när du utvecklar anpassade program. [!DNL Adobe Experience Manager] som en Cloud Service använder API:t för att skicka bearbetningsinformationen till ett anpassat program. Mer information finns i [Använda resursmikrotjänster och Bearbeta profiler](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+API:t används endast i utvecklingssyfte. API:t anges som ett sammanhang när du utvecklar anpassade program. [!DNL Adobe Experience Manager] som en Cloud Service använder API:t för att skicka bearbetningsinformationen till ett anpassat program. Mer information finns i [Använda resursmikrotjänster och Bearbeta profiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ Dessa kräver att [!DNL Adobe Developer Console] projektet prenumererar på `Ass
 * Grundläggande
    * omfattningar: `openid,AdobeID`
 
-* Resursberäkning
+* asset compute
    * metaskop: `asset_compute_meta`
    * omfattningar: `asset_compute,read_organizations`
 
@@ -349,7 +349,7 @@ Alla JSON-svar (om sådana finns) innehåller `requestId` värdet som är samma 
 
 ## Anmäl dig till efterbearbetning {#opt-in-to-post-processing}
 
-SDK:t [Resursberäkning](https://github.com/adobe/asset-compute-sdk) har stöd för en uppsättning grundläggande alternativ för efterbearbetning av bilder. Anpassade arbetare kan uttryckligen välja att efterbearbeta genom att ställa in fältet `postProcess` i återgivningsobjektet på `true`.
+Asset compute SDK [](https://github.com/adobe/asset-compute-sdk) har stöd för en uppsättning grundläggande alternativ för efterbearbetning av bilder. Anpassade arbetare kan uttryckligen välja att efterbearbeta genom att ställa in fältet `postProcess` i återgivningsobjektet på `true`.
 
 De användningsområden som stöds är:
 
@@ -362,7 +362,7 @@ De användningsområden som stöds är:
 
 ## Vattenstämpelresurser {#add-watermark}
 
-Det går att lägga till en [vattenstämpel till PNG-, JPEG-, TIFF- och GIF-bildfiler i SDK](https://github.com/adobe/asset-compute-sdk) för resursuppsättning. Vattenstämpeln läggs till efter återgivningsinstruktionerna i objektet på `watermark` återgivningen.
+I [Asset compute SDK](https://github.com/adobe/asset-compute-sdk) kan du lägga till en vattenstämpel i PNG-, JPEG-, TIFF- och GIF-filer. Vattenstämpeln läggs till efter återgivningsinstruktionerna i objektet på `watermark` återgivningen.
 
 Vattenstämplar görs under efterbearbetningen av återgivningen. För att skapa vattenstämpelresurser går den anpassade arbetaren [vidare till efterbearbetning](#opt-in-to-post-processing) genom att ange fältet `postProcess` i återgivningsobjektet till `true`. Om arbetaren inte väljer att inte göra det används inte vattenstämplar, även om vattenstämpelobjektet har angetts för återgivningsobjektet i begäran.
 
@@ -374,7 +374,7 @@ Detta är de tillgängliga alternativen för `renditions` arrayen i [/process](#
 
 | Namn | Typ | Beskrivning | Exempel |
 |-------------------|----------|-------------|---------|
-| `fmt` | `string` | Målformatet för återgivningarna kan även användas `text` för textrahering och `xmp` för att extrahera XMP som XML. Se [format som stöds](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
+| `fmt` | `string` | Målformatet för återgivningarna kan även användas `text` för textrahering och `xmp` för att extrahera XMP som XML. Se [format som stöds](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
 | `worker` | `string` | URL för ett [anpassat program](develop-custom-application.md). Måste vara en `https://` URL. Om det här fältet finns skapas återgivningen av ett anpassat program. Alla andra inställda återgivningsfält används sedan i det anpassade programmet. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | URL som den genererade återgivningen ska överföras till med HTTP PUT. | `http://w.com/img.jpg` |
 | `target` | `object` | Multipart-försignerad URL-överföringsinformation för den genererade återgivningen. Detta är för [AEM/Oak Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) med detta [multipart-överföringsbeteende](http://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>fält:<ul><li>`urls`: array med strängar, en för varje försignerad del-URL</li><li>`minPartSize`: den minsta storleken som ska användas för en del = url</li><li>`maxPartSize`: maxstorleken som ska användas för en del = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
@@ -382,7 +382,7 @@ Detta är de tillgängliga alternativen för `renditions` arrayen i [/process](#
 
 ### Återgivningsspecifika fält {#rendition-specific-fields}
 
-En lista över de filformat som stöds finns i Filformat som [stöds](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html).
+En lista över de filformat som stöds finns i Filformat som [stöds](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 | Namn | Typ | Beskrivning | Exempel |
 |-------------------|----------|-------------|---------|
