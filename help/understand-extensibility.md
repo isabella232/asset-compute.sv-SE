@@ -2,9 +2,9 @@
 title: Förstå om att utöka [!DNL Asset Compute Service].
 description: När och hur [!DNL Asset Compute Service] funktionaliteten ska utökas för att utföra anpassad mediebearbetning.
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # Introduktion till utökningsbarhet {#introduction-to-extensibilty}
 
-Många återgivningskrav, som konvertering till format och storleksändring av bilder, hanteras av [Bearbeta profiler [!DNL Experience Manager] som en Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html). Mer komplexa affärsbehov kan behöva en skräddarsydd lösning som passar organisationens behov. [!DNL Asset Compute Service] kan utökas genom att skapa anpassade program som anropas från Bearbeta profiler i [!DNL Experience Manager]. Dessa anpassade program uppfyller de [användningsfall](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)som stöds.
+Många återgivningskrav, som konvertering till format och storleksändring av bilder, hanteras av [Bearbeta profiler [!DNL Experience Manager] som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html). Mer komplexa affärsbehov kan behöva en skräddarsydd lösning som passar organisationens behov. [!DNL Asset Compute Service] kan utökas genom att skapa anpassade program som anropas från Bearbeta profiler i [!DNL Experience Manager]. Dessa anpassade program uppfyller de [användningsfall](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)som stöds.
 
 >[!NOTE]
 >
 >[!DNL Asset Compute Service] är bara tillgängligt för användning med [!DNL Experience Manager] som Cloud Service.
 
-De anpassade programmen är headless [Project Fire](https://github.com/AdobeDocs/project-firefly) -appar. Att bygga ut [!DNL Asset Compute Service] med anpassade program är enkelt tack vare utvecklingsverktygen [Asset Compute SDK](https://github.com/adobe/asset-compute-sdk) och Project Fire. Detta gör att utvecklare kan fokusera på affärslogik. Att skapa anpassade program är enkelt än att skapa en Adobe I/O Runtime-åtgärd utan vanliga servrar. Det är en enda Node.js JavaScript-funktion. Det [grundläggande anpassade programexemplet](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) visar det.
+De anpassade programmen är headless [Project Fire](https://github.com/AdobeDocs/project-firefly) -appar. Det är enkelt att bygga ut [!DNL Asset Compute Service] med anpassade program tack vare utvecklingsverktygen [Asset compute SDK](https://github.com/adobe/asset-compute-sdk) och Project Fire. Detta gör att utvecklare kan fokusera på affärslogik. Att skapa anpassade program är enkelt än att skapa en Adobe I/O Runtime-åtgärd utan vanliga servrar. Det är en enda Node.js JavaScript-funktion. Det [grundläggande anpassade programexemplet](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) visar det.
 
 ## Krav och etableringskrav {#prerequisites-and-provisioning}
 
