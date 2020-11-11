@@ -2,9 +2,9 @@
 title: Introduktion till [!DNL Asset Compute Service]programmet.
 description: '[!DNL Asset Compute Service] är en molnbaserad resurshanteringstjänst som minskar komplexiteten och förbättrar skalbarheten.'
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '321'
 ht-degree: 0%
 
 ---
@@ -20,13 +20,13 @@ Utvecklare kan plugin-program för anpassade resurser (kallas även anpassade ar
 
 >[!NOTE]
 >
->För närvarande [!DNL Asset Compute Service] kan du bara använda den via [!DNL Experience Manager] en Cloud Service. Administratörer skapar bearbetningsprofiler som kan anropa [!DNL Asset Compute Service] för att skicka resurser för bearbetning. Se [Använda mikrotjänster och bearbetningsprofiler](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+>För närvarande [!DNL Asset Compute Service] kan du bara använda den via [!DNL Experience Manager] en Cloud Service. Administratörer skapar bearbetningsprofiler som kan anropa [!DNL Asset Compute Service] för att skicka resurser för bearbetning. Se [Använda mikrotjänster och bearbetningsprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 ## Användningsexempel som stöds av [!DNL Asset Compute Service] {#possible-use-cases-benefits}
 
 [!DNL Asset Compute Service] har stöd för ett fåtal vanliga användningsområden, t.ex. grundläggande bildbehandling, Adobe applikationsspecifika konverteringar, och skräddarsydda applikationer som tillgodoser komplexa affärsbehov.
 
-Du kan använda [!DNL Asset Compute] webbtjänsten för att generera miniatyrbilder för olika filtyper, bildåtergivningar med hög kvalitet för de [filformat](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html)som stöds. Se [användningsexempel som stöds via anpassad konfiguration](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html#custom-config).
+Du kan använda [!DNL Asset Compute] webbtjänsten för att generera miniatyrbilder för olika filtyper, bildåtergivningar med hög kvalitet för de [filformat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)som stöds. Se [användningsexempel som stöds via anpassad konfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
@@ -45,10 +45,10 @@ Du kan använda [!DNL Asset Compute] webbtjänsten för att generera miniatyrbil
 
 >[!MORELIKETHIS]
 >
->* [Översikt över bearbetning av resurser med hjälp av mikrotjänster i Adobe Experience Manager som Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html).
+>* [Översikt över bearbetning av resurser med hjälp av mikrotjänster i Adobe Experience Manager som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
 >* [Dokumentation om Project Fire](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
->* [Filformat som kan bearbetas](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html).
->* [Versionsinformation om tjänsten Resursberäkning](release-notes.md)
+>* [Filformat som kan bearbetas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
+>* [Versionsinformation om tjänsten Asset compute](release-notes.md)
 
 
 <!-- **TBD:**
