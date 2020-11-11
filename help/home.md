@@ -2,9 +2,9 @@
 title: '[!DNL Adobe Asset Compute Service] Användarhandbok.'
 description: Den här dokumentationen [!DNL Asset Compute Service] innehåller uppgifter om till exempel introduktion, hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod.
 translation-type: tm+mt
-source-git-commit: 1c2a1dc41296bf26c432c51b5afa20cb07a4c5c5
+source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '195'
 ht-degree: 1%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 1%
 
 Den här dokumentationen innehåller [!DNL Asset Compute Service] ämnen som hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod. Se den här [!DNL Asset Compute Service] introduktionen [om du vill veta vad](introduction.md)som erbjuder. Se [vad tjänsten kan göra för dig](introduction.md#possible-use-cases-benefits).
 
-[!DNL Asset Compute Service] har stöd för konvertering av många filformat och kan integreras med många Adobe-tjänster. Se listan över filformat och tjänster som [stöds](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/file-format-support.html).
+[!DNL Asset Compute Service] har stöd för konvertering av många filformat och kan integreras med många Adobe-tjänster. Se listan över filformat och tjänster som [stöds](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 Versionsrelaterad information och den senaste finns i [versionsinformationen](/help/release-notes.md).
 
-Se en översikt över funktionerna för [tillgångsmikrotjänster i Adobe Experience Manager som Cloud Service](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/assets/asset-microservices-overview.html) och hur du använder mikrotjänsterna i [!DNL Experience Manager].
+Se en översikt över funktionerna för [tillgångsmikrotjänster i Adobe Experience Manager som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) och hur du använder mikrotjänsterna i [!DNL Experience Manager].
 
 <!--
 Possible to record the below info here in this landing page to centralize the miscellaneous info about Asset Compute Service?
