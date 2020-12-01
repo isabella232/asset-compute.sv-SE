@@ -2,9 +2,9 @@
 title: '[!DNL Adobe Asset Compute Service] Användarhandbok.'
 description: Den här dokumentationen behandlar [!DNL Asset Compute Service] uppgifter som introduktion, hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod.
 translation-type: tm+mt
-source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
+source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '190'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Denna dokumentation beskriver [!DNL Asset Compute Service] ämnen som hur du utv
 
 Versionsrelaterad information och den senaste informationen finns i [versionsinformationen](/help/release-notes.md).
 
-Se en översikt över [funktionerna för mediefrekvenser i Adobe Experience Manager som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) och hur du använder mikrotjänsterna i [!DNL Experience Manager].
+Se en översikt över [de mikrotjänster för resurser som finns i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) och hur du använder mikrotjänsterna i [!DNL Experience Manager].
 
 <!--
 Possible to record the below info here in this landing page to centralize the miscellaneous info about Asset Compute Service?
