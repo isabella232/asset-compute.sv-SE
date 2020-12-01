@@ -1,5 +1,5 @@
 ---
-title: Introduktion till [!DNL Asset Compute Service]programmet.
+title: Introduktion till  [!DNL Asset Compute Service].
 description: '[!DNL Asset Compute Service] är en molnbaserad resurshanteringstjänst som minskar komplexiteten och förbättrar skalbarheten.'
 translation-type: tm+mt
 source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
@@ -12,21 +12,21 @@ ht-degree: 0%
 
 # Översikt över [!DNL Asset Compute Service] {#overview}
 
-[!DNL Asset Compute Service] är en skalbar och utbyggbar tjänst för [!DNL Adobe Experience Cloud] att bearbeta digitala resurser. Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata samt arkiv.
+[!DNL Asset Compute Service] är en skalbar och utbyggbar tjänst för  [!DNL Adobe Experience Cloud] att bearbeta digitala resurser. Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata samt arkiv.
 
-Utvecklare kan plugin-program för anpassade resurser (kallas även anpassade arbetare) för att hantera anpassade användningsfall. Tjänsten fungerar på [!DNL Adobe I/O] körningsmiljön. Den kan utökas via [!DNL Project Firefly] headless-appar skrivna i Node.js. Dessa kan utföra anpassade åtgärder som att anropa externa API:er för att utföra bildåtgärder eller utnyttja [!DNL Adobe Sensei] stödet.
+Utvecklare kan plugin-program för anpassade resurser (kallas även anpassade arbetare) för att hantera anpassade användningsfall. Tjänsten fungerar på [!DNL Adobe I/O]-miljön. Den kan utökas via [!DNL Project Firefly] headless-appar skrivna i Node.js. Dessa kan utföra anpassade åtgärder som att anropa externa API:er för att utföra bildåtgärder eller utnyttja stödet för [!DNL Adobe Sensei].
 
-[!DNL Project Firefly] är ett ramverk för att bygga och driftsätta anpassade webbapplikationer på [!DNL Adobe I/O] runtime för att utöka Adobe Experience Cloud lösningar. För att skapa anpassade program kan utvecklarna använda [!DNL React Spectrum] (Adobe’s UI toolkit), skapa mikrotjänster, skapa anpassade händelser och skapa programmeringsgränssnitt. Se [dokumentationen om Project Fire](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
+[!DNL Project Firefly] är ett ramverk för att bygga och driftsätta anpassade webbapplikationer för  [!DNL Adobe I/O] körning för att utöka Adobe Experience Cloud lösningar. Om du vill skapa anpassade program kan utvecklarna använda [!DNL React Spectrum] (Adobe’s UI toolkit), skapa mikrotjänster, skapa anpassade händelser och ordna API:er. Mer information finns i [dokumentationen för Project Fire](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
 
 >[!NOTE]
 >
->För närvarande [!DNL Asset Compute Service] kan du bara använda den via [!DNL Experience Manager] en Cloud Service. Administratörer skapar bearbetningsprofiler som kan anropa [!DNL Asset Compute Service] för att skicka resurser för bearbetning. Se [Använda mikrotjänster och bearbetningsprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+>För närvarande kan [!DNL Asset Compute Service] bara användas via [!DNL Experience Manager] som Cloud Service. Administratörer skapar bearbetningsprofiler som kan anropa [!DNL Asset Compute Service] för att skicka resurser för bearbetning. Se [använda resursmikrotjänster och bearbetningsprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 ## Användningsexempel som stöds av [!DNL Asset Compute Service] {#possible-use-cases-benefits}
 
 [!DNL Asset Compute Service] har stöd för ett fåtal vanliga användningsområden, t.ex. grundläggande bildbehandling, Adobe applikationsspecifika konverteringar, och skräddarsydda applikationer som tillgodoser komplexa affärsbehov.
 
-Du kan använda [!DNL Asset Compute] webbtjänsten för att generera miniatyrbilder för olika filtyper, bildåtergivningar med hög kvalitet för de [filformat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)som stöds. Se [användningsexempel som stöds via anpassad konfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+Du kan använda webbtjänsten [!DNL Asset Compute] för att generera miniatyrer för olika filtyper, bildåtergivning med hög kvalitet för de [filformat som stöds](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html). Se [användningsfall som stöds via anpassad konfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
