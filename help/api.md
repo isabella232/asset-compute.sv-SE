@@ -2,9 +2,9 @@
 title: '[!DNL Asset Compute Service] HTTP API.'
 description: '[!DNL Asset Compute Service] HTTP API för att skapa anpassade program.'
 translation-type: tm+mt
-source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '2925'
+source-wordcount: '2921'
 ht-degree: 1%
 
 ---
@@ -12,11 +12,11 @@ ht-degree: 1%
 
 # [!DNL Asset Compute Service] HTTP-API  {#asset-compute-http-api}
 
-API:t används endast i utvecklingssyfte. API:t anges som ett sammanhang när du utvecklar anpassade program. [!DNL Adobe Experience Manager] som en Cloud Service använder API:t för att skicka bearbetningsinformationen till ett anpassat program. Mer information finns i [Använda resursmikrotjänster och Bearbeta profiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+API:t används endast i utvecklingssyfte. API:t anges som ett sammanhang när du utvecklar anpassade program. [!DNL Adobe Experience Manager] som  [!DNL Cloud Service] använder API:t för att skicka bearbetningsinformationen till ett anpassat program. Mer information finns i [Använda resursmikrotjänster och Bearbeta profiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 >[!NOTE]
 >
->[!DNL Asset Compute Service] är bara tillgängligt för användning med  [!DNL Experience Manager] som Cloud Service.
+>[!DNL Asset Compute Service] är endast tillgängligt för användning med  [!DNL Experience Manager] som  [!DNL Cloud Service]en.
 
 Alla klienter i HTTP-API:t [!DNL Asset Compute Service] måste följa detta högnivåflöde:
 
