@@ -1,6 +1,6 @@
 ---
-title: Förstå om att utöka [!DNL Asset Compute Service].
-description: När och hur [!DNL Asset Compute Service] funktionaliteten ska utökas för att utföra anpassad mediebearbetning.
+title: Lär dig mer om att utöka [!DNL Asset Compute Service].
+description: När och hur du ska utöka funktionen [!DNL Asset Compute Service] för att utföra anpassad resurshantering.
 translation-type: tm+mt
 source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
@@ -12,22 +12,22 @@ ht-degree: 0%
 
 # Introduktion till utökningsbarhet {#introduction-to-extensibilty}
 
-Många återgivningskrav, som konvertering till format och storleksändring av bilder, hanteras av [Bearbeta profiler [!DNL Experience Manager] som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html). Mer komplexa affärsbehov kan behöva en skräddarsydd lösning som passar organisationens behov. [!DNL Asset Compute Service] kan utökas genom att skapa anpassade program som anropas från Bearbeta profiler i [!DNL Experience Manager]. Dessa anpassade program uppfyller de [användningsfall](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html)som stöds.
+Många återgivningskrav, som konvertering till format och storleksändring av bilder, uppfylls av [Bearbetningsprofiler i [!DNL Experience Manager] som en Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html). Mer komplexa affärsbehov kan behöva en skräddarsydd lösning som passar organisationens behov. [!DNL Asset Compute Service] kan utökas genom att skapa anpassade program som anropas från Bearbeta profiler i  [!DNL Experience Manager]. Dessa anpassade program uppfyller [användningsexemplen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html) som stöds.
 
 >[!NOTE]
 >
->[!DNL Asset Compute Service] är bara tillgängligt för användning med [!DNL Experience Manager] som Cloud Service.
+>[!DNL Asset Compute Service] är bara tillgängligt för användning med  [!DNL Experience Manager] som Cloud Service.
 
-De anpassade programmen är headless [Project Fire](https://github.com/AdobeDocs/project-firefly) -appar. Det är enkelt att bygga ut [!DNL Asset Compute Service] med anpassade program tack vare utvecklingsverktygen [Asset compute SDK](https://github.com/adobe/asset-compute-sdk) och Project Fire. Detta gör att utvecklare kan fokusera på affärslogik. Att skapa anpassade program är enkelt än att skapa en Adobe I/O Runtime-åtgärd utan vanliga servrar. Det är en enda Node.js JavaScript-funktion. Det [grundläggande anpassade programexemplet](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) visar det.
+De anpassade programmen är headless [Project Fire](https://github.com/AdobeDocs/project-firefly)-program. Det är enkelt att utöka [!DNL Asset Compute Service] med anpassade program via utvecklarverktygen [Asset compute SDK](https://github.com/adobe/asset-compute-sdk) och Project Firefly. Detta gör att utvecklare kan fokusera på affärslogik. Att skapa anpassade program är enkelt än att skapa en Adobe I/O Runtime-åtgärd utan vanliga servrar. Det är en enda Node.js JavaScript-funktion. Det [grundläggande anpassade programexemplet](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustrerar det.
 
 ## Krav och etableringskrav {#prerequisites-and-provisioning}
 
 Kontrollera att du uppfyller följande krav:
 
 * Project Fire-verktygen är installerade på datorn.
-* En [!DNL Experience Cloud] organisation. Mer information [här](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/setup.md#acquire-access-and-credentials).
-* Experience Organization måste ha [!DNL Experience Manager] som Cloud Service aktiverat.
-* [!DNL Adobe Experience Cloud] är en del av programmet för förhandsgranskning av [!DNL Project Firefly] utvecklare. Se [hur du ansöker om åtkomst](https://github.com/AdobeDocs/project-firefly/blob/master/overview/getting_access.md).
+* En [!DNL Experience Cloud]-organisation. Mer information [här](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/setup.md#acquire-access-and-credentials).
+* Experience Organization måste ha [!DNL Experience Manager] som en Cloud Service aktiverad.
+* [!DNL Adobe Experience Cloud] är en del av förhandsgranskningsprogrammet för  [!DNL Project Firefly] utvecklare. Se [hur du ansöker om åtkomst](https://github.com/AdobeDocs/project-firefly/blob/master/overview/getting_access.md).
 * Se till att utvecklarrollen eller administratörsbehörigheten finns i organisationen för utvecklaren.
 * Kontrollera att [Adobe I/O CLI](https://github.com/adobe/aio-cli) är installerat lokalt.
 
