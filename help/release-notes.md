@@ -2,9 +2,9 @@
 title: Versionsinformation för [!DNL Asset Compute Service].
 description: Nya funktioner, förbättringar och kända fel i [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 68d910cd092fccb599c361f24daff80460129e1c
+source-git-commit: c57867cd896e4ccb9402e6eeb0eea133faaa0e5d
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ To test your custom applications with the [developer tool](https://github.com/ad
 
 Detta är den första versionen av [!DNL Asset Compute Service]. Det är en skalbar och utbyggbar tjänst på [!DNL Adobe Experience Cloud] som bearbetar digitala resurser. Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata samt arkiv.
 
-För närvarande kan [!DNL Asset Compute Service] bara användas i [!DNL Experience Manager] som en Cloud Service.
+För närvarande kan [!DNL Asset Compute Service] bara användas i [!DNL Experience Manager] som [!DNL Cloud Service].
 
 ## Begränsningar och kända fel {#known-limitations}
 
