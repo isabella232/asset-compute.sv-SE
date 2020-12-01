@@ -2,9 +2,9 @@
 title: Introduktion till  [!DNL Asset Compute Service].
 description: '[!DNL Asset Compute Service] är en molnbaserad resurshanteringstjänst som minskar komplexiteten och förbättrar skalbarheten.'
 translation-type: tm+mt
-source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
+source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Utvecklare kan plugin-program för anpassade resurser (kallas även anpassade ar
 
 >[!NOTE]
 >
->För närvarande kan [!DNL Asset Compute Service] bara användas via [!DNL Experience Manager] som Cloud Service. Administratörer skapar bearbetningsprofiler som kan anropa [!DNL Asset Compute Service] för att skicka resurser för bearbetning. Se [använda resursmikrotjänster och bearbetningsprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
+>För närvarande kan [!DNL Asset Compute Service] bara användas via [!DNL Experience Manager] som [!DNL Cloud Service]. Administratörer skapar bearbetningsprofiler som kan anropa [!DNL Asset Compute Service] för att skicka resurser för bearbetning. Se [använda resursmikrotjänster och bearbetningsprofiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
 ## Användningsexempel som stöds av [!DNL Asset Compute Service] {#possible-use-cases-benefits}
 
@@ -45,7 +45,7 @@ Du kan använda webbtjänsten [!DNL Asset Compute] för att generera miniatyrer 
 
 >[!MORELIKETHIS]
 >
->* [Översikt över bearbetning av resurser med hjälp av mikrotjänster i Adobe Experience Manager som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
+>* [Översikt över tillgångsbearbetning med tillgångsmikrotjänster  [!DNL Adobe Experience Manager] som en [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
 >* [Dokumentation om Project Fire](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
 >* [Filformat som kan bearbetas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 >* [Versionsinformation om tjänsten Asset compute](release-notes.md)
