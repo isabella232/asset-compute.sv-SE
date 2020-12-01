@@ -2,9 +2,9 @@
 title: Utveckla för [!DNL Asset Compute Service].
 description: Skapa anpassade program med  [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 6de4e3cde9c38f2e23838f5d728dae23e15d2147
+source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Utvecklarverktyget som används för att testa anpassade program med det faktisk
 
 >[!NOTE]
 >
->Detta är skilt från molnlagringen av [!DNL Adobe Experience Manager] som en Cloud Service. Det gäller endast för utveckling och testning med utvecklingsverktyget Asset compute.
+>Detta är skilt från molnlagringen av [!DNL Adobe Experience Manager] som en [!DNL Cloud Service]. Det gäller endast för utveckling och testning med utvecklingsverktyget Asset compute.
 
 Se till att du har tillgång till en [molnlagringsbehållare](https://github.com/adobe/asset-compute-devtool#prerequisites) som stöds. Den här behållaren kan delas av flera utvecklare i olika projekt efter behov.
 
