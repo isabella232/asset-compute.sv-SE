@@ -1,6 +1,6 @@
 ---
 title: '[!DNL Adobe Asset Compute Service] Användarhandbok.'
-description: Den här dokumentationen [!DNL Asset Compute Service] innehåller uppgifter om till exempel introduktion, hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod.
+description: Den här dokumentationen behandlar [!DNL Asset Compute Service] uppgifter som introduktion, hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod.
 translation-type: tm+mt
 source-git-commit: 79630efa8cee2c8919d11e9bb3c14ee4ef54d0f3
 workflow-type: tm+mt
@@ -12,15 +12,15 @@ ht-degree: 1%
 
 # Om [!DNL Asset Compute Service]
 
-[!DNL Asset Compute Service] är en skalbar och utbyggbar tjänst i Adobe Experience Cloud för att bearbeta digitalt material. Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata, arkiv med mera. Utvecklare kan plugin-program (kallas även egna arbetare) för att hantera anpassade användningsfall som skapats med [Project Fire](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html) och körs i [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html)utan server.
+[!DNL Asset Compute Service] är en skalbar och utbyggbar tjänst i Adobe Experience Cloud för att bearbeta digitalt material. Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata, arkiv med mera. Utvecklare kan plugin-program (kallas även anpassade arbetare) för anpassade användningsfall som skapats med [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html) och körs på serverlösa [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html).
 
-Den här dokumentationen innehåller [!DNL Asset Compute Service] ämnen som hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod. Se den här [!DNL Asset Compute Service] introduktionen [om du vill veta vad](introduction.md)som erbjuder. Se [vad tjänsten kan göra för dig](introduction.md#possible-use-cases-benefits).
+Denna dokumentation beskriver [!DNL Asset Compute Service] ämnen som hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod. Om du vill veta vad [!DNL Asset Compute Service]-erbjudandet är kan du läsa den här [introduktionen](introduction.md). Ta en titt på [vad tjänsten kan göra för dig](introduction.md#possible-use-cases-benefits).
 
-[!DNL Asset Compute Service] har stöd för konvertering av många filformat och kan integreras med många Adobe-tjänster. Se listan över filformat och tjänster som [stöds](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
+[!DNL Asset Compute Service] har stöd för konvertering av många filformat och kan integreras med många Adobe-tjänster. Se listan över [filformat och tjänster som stöds](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
-Versionsrelaterad information och den senaste finns i [versionsinformationen](/help/release-notes.md).
+Versionsrelaterad information och den senaste informationen finns i [versionsinformationen](/help/release-notes.md).
 
-Se en översikt över funktionerna för [tillgångsmikrotjänster i Adobe Experience Manager som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) och hur du använder mikrotjänsterna i [!DNL Experience Manager].
+Se en översikt över [funktionerna för mediefrekvenser i Adobe Experience Manager som Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) och hur du använder mikrotjänsterna i [!DNL Experience Manager].
 
 <!--
 Possible to record the below info here in this landing page to centralize the miscellaneous info about Asset Compute Service?
