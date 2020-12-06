@@ -2,9 +2,9 @@
 title: Ange den utvecklingsmiljö som krävs för [!DNL Asset Compute Service].
 description: Konfigurera utvecklarmiljön för [!DNL Asset Compute Service] att börja skapa och testa anpassad kod.
 translation-type: tm+mt
-source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
+source-git-commit: 0ecf2c044c7847029fb10ce37f4b831c58b93fe9
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Om du vill skapa en konfiguration som gör att du kan utveckla för [!DNL Asset 
 
 1. Ge systemadministratör eller utvecklarroll åtkomst i Experience Organization. Detta kan anges av en systemadministratör i [Admin Console](https://adminconsole.adobe.com/overview).
 
-1. Logga in på [Adobe Developer Console](https://console.adobe.io/). Se till att du är en del av samma Adobe Experience Cloud-organisation som AEM som en [!DNL Cloud Service]-integrering. Mer information om Adobe Developer Console finns i [Konsoldokumentation](https://www.adobe.io/apis/experienceplatform/console/docs.html).
+1. Logga in på [Adobe Developer Console](https://console.adobe.io/). Se till att du är en del av samma Adobe Experience Cloud-organisation som [!DNL Experience Manager] som en [!DNL Cloud Service]-integrering. Mer information om Adobe Developer Console finns i [Konsoldokumentation](https://www.adobe.io/apis/experienceplatform/console/docs.html).
 
 1. [Skapa ett Firefoly-projekt](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html#!AdobeDocs/project-firefly/master/getting_started/first_app.md). Klicka på **[!UICONTROL Skapa nytt projekt]** > **[!UICONTROL Projekt från mall]**. Välj eldfluga. Ett nytt Fireworks-projekt med två arbetsytor skapas: `Production` och `Stage`. Lägg till ytterligare arbetsytor, till exempel `Development`, efter behov.
 
