@@ -2,9 +2,9 @@
 title: Utveckla för [!DNL Asset Compute Service].
 description: Skapa anpassade program med  [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
+source-git-commit: 576936cc7527fc4cb43c0859a61df5fecc0bc3a8
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1569'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Kontrollera att [Adobe I/O CLI](https://github.com/adobe/aio-cli) är installera
    create console.json
    ```
 
-1. Välj minst `Actions` när du uppmanas till `Which Adobe I/O App features do you want to enable for this project?`:
+1. Välj `Actions` när du uppmanas till det med `Which Adobe I/O App features do you want to enable for this project?`. Se till att avmarkera alternativet `Web Assets` eftersom webbresurser använder olika autentiserings- och auktoriseringskontroller.
 
    ```bash
    ? Which Adobe I/O App features do you want to enable for this project?
