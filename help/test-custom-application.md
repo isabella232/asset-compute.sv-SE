@@ -2,9 +2,9 @@
 title: Testa och felsök  [!DNL Asset Compute Service] anpassade program.
 description: Testa och felsök  [!DNL Asset Compute Service] anpassade program.
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Med testramverket för programenheten i Asset compute kan du testa program utan 
 
 ### Lägg till test {#add-tests}
 
-Tester förväntas i mappen `test` på rotnivån i AIO-projektet. Testfallen för varje program ska finnas i sökvägen `test/asset-compute/<worker-name>`, med en mapp för varje testfall:
+Tester förväntas i mappen `test` på rotnivån i [!DNL Adobe I/O]-projektet. Testfallen för varje program ska finnas i sökvägen `test/asset-compute/<worker-name>`, med en mapp för varje testfall:
 
 ```yaml
 action/
