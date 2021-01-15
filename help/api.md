@@ -2,9 +2,9 @@
 title: '[!DNL Asset Compute Service] HTTP API.'
 description: '[!DNL Asset Compute Service] HTTP API för att skapa anpassade program.'
 translation-type: tm+mt
-source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '2921'
+source-wordcount: '2906'
 ht-degree: 1%
 
 ---
@@ -68,11 +68,11 @@ Dessa kräver att [!DNL Adobe Developer Console]-projektet prenumererar på tjä
    * metaskop: `asset_compute_meta`
    * omfattningar: `asset_compute,read_organizations`
 
-* Adobe I/O Events
+* [!DNL Adobe I/O] Händelser
    * metaskop: `event_receiver_api`
    * omfattningar: `event_receiver,event_receiver_api`
 
-* Adobe I/O Management API
+* [!DNL Adobe I/O] Hanterings-API
    * metaskop: `ent_adobeio_sdk`
    * omfattningar: `adobeio_api,additional_info.roles,additional_info.projectedProductContext`
 
@@ -412,9 +412,9 @@ PNG-formatet används som vattenstämpel.
 
 ## Asynkrona händelser {#asynchronous-events}
 
-När bearbetningen av en återgivning är klar eller när ett fel inträffar, skickas en händelse till en [Adobe I/O Events Journal](https://www.adobe.io/apis/experienceplatform/events/documentation.html#!adobedocs/adobeio-events/master/intro/journaling_api.md). Klienterna måste lyssna på den journal-URL som anges via [/register](#register). Journalsvaret innehåller en `event`-array som består av ett objekt för varje händelse, varav fältet `event` innehåller den faktiska händelsens nyttolast.
+När bearbetningen av en återgivning är klar eller när ett fel inträffar, skickas en händelse till en [[!DNL Adobe I/O] händelsjournal](https://www.adobe.io/apis/experienceplatform/events/documentation.html#!adobedocs/adobeio-events/master/intro/journaling_api.md). Klienterna måste lyssna på den journal-URL som anges via [/register](#register). Journalsvaret innehåller en `event`-array som består av ett objekt för varje händelse, varav fältet `event` innehåller den faktiska händelsens nyttolast.
 
-Adobe I/O-händelsetypen för alla händelser i [!DNL Asset Compute Service] är `asset_compute`. Journalen prenumererar automatiskt på endast den här händelsetypen och det finns inget annat behov av att filtrera baserat på händelsetypen i Adobe I/O. Tjänstspecifika händelsetyper är tillgängliga i egenskapen `type` för händelsen.
+Händelsetypen [!DNL Adobe I/O] för alla händelser i [!DNL Asset Compute Service] är `asset_compute`. Journalen prenumererar automatiskt på endast den här händelsetypen och det finns inget annat behov av att filtrera baserat på händelsetypen [!DNL Adobe I/O]. Tjänstspecifika händelsetyper är tillgängliga i egenskapen `type` för händelsen.
 
 ### Händelsetyper {#event-types}
 
