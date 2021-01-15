@@ -2,9 +2,9 @@
 title: Utveckla för [!DNL Asset Compute Service].
 description: Skapa anpassade program med  [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 576936cc7527fc4cb43c0859a61df5fecc0bc3a8
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1560'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Innan du börjar utveckla ett anpassat program:
 
 ## Skapa ett anpassat program {#create-custom-application}
 
-Kontrollera att [Adobe I/O CLI](https://github.com/adobe/aio-cli) är installerat lokalt.
+Kontrollera att [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) är installerat lokalt.
 
 1. Om du vill skapa ett anpassat program [skapar du en Firefoly-app](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#4-bootstrapping-new-app-using-the-cli). Om du vill göra det kör du `aio app init <app-name>` i terminalen.
 
@@ -32,7 +32,7 @@ Kontrollera att [Adobe I/O CLI](https://github.com/adobe/aio-cli) är installera
 
    ```sh
    $ aio app init <app-name>
-   Retrieving information from Adobe I/O Console..
+   Retrieving information from [!DNL Adobe I/O] Console.
    ? Select Org My Adobe Org
    ? Select Project MyFireflyProject
    ? Select Workspace myworkspace
@@ -121,7 +121,7 @@ Lägg till följande inloggningsuppgifter för utvecklingsverktyget i ENV-filen 
 
 Innan du kör programmet med Asset compute Developer Tool måste du konfigurera [inloggningsuppgifterna](#developer-tool-credentials) korrekt.
 
-Om du vill köra programmet i utvecklingsverktyget använder du kommandot `aio app run`. Den distribuerar åtgärden till Adobe I/O Runtime och startar utvecklingsverktyget på den lokala datorn. Det här verktyget används för att testa programbegäranden under utveckling. Här är ett exempel på en renderingsförfrågan:
+Om du vill köra programmet i utvecklingsverktyget använder du kommandot `aio app run`. Den distribuerar åtgärden till [!DNL Adobe I/O] Runtime och startar utvecklingsverktyget på den lokala datorn. Det här verktyget används för att testa programbegäranden under utveckling. Här är ett exempel på en renderingsförfrågan:
 
 ```json
 "renditions": [
@@ -266,7 +266,7 @@ const key = params.secretKey;
 
 ## Anpassa storlek på program {#sizing-workers}
 
-Ett program körs i en behållare i Adobe I/O Runtime med [gränser](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) som kan konfigureras via `manifest.yml`:
+Ett program körs i en behållare i [!DNL Adobe I/O]-miljön med [begränsningar](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) som kan konfigureras via `manifest.yml`:
 
 ```yaml
     actions:
