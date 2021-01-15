@@ -2,9 +2,9 @@
 title: Contribute to the open-source components of [!DNL Asset Compute Service].
 description: Contribute to the open-source components of [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 127895cf1bab59546f9ba0be2b3b7a935627effb
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ Detaljerade riktlinjer finns i [riktlinjerna för bidrag](https://github.com/ado
 
 ## Tillgängliga resurser och bibliotek {#available-resources}
 
-Se den här listan med [bibliotek](https://github.com/adobe/asset-compute-sdk#available-resources-and-libraries) med öppen källkod för [!DNL Asset Compute Service]. Dessutom finns följande Adobe I/O Runtime- och OpenWhisk-resurser:
+Se den här listan med [bibliotek](https://github.com/adobe/asset-compute-sdk#available-resources-and-libraries) med öppen källkod för [!DNL Asset Compute Service]. Tillgängliga [!DNL Adobe I/O] Runtime- och OpenWhisk-resurser är dessutom:
 
 * [Kom igång med Apache OpenWhisk](https://github.com/apache/incubator-openwhisk/tree/master/docs#getting-started-with-openwhisk).
-* [Lab: Bygg sammanställbar AI med Adobe Sensei-funktioner och Adobe I/O Runtime](https://opensource.adobe.com/adobe-sensei-ai-functions/index.html).
-* [Adobe I/O Runtime FAQ](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/resources/faq.md)
+* [Lab: Bygg sammanställbar AI  [!DNL Adobe Sensei] functions and [!DNL Adobe I/O] medRuntime](https://opensource.adobe.com/adobe-sensei-ai-functions/index.html).
+* [[!DNL Adobe I/O] Vanliga frågor om körning](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/resources/faq.md)
 
 <!-- **TBD** for post-release:
 * Link to Firefly open-source components.
