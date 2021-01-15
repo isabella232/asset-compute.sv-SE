@@ -2,9 +2,9 @@
 title: Lär dig mer om att utöka [!DNL Asset Compute Service].
 description: När och hur du ska utöka funktionen [!DNL Asset Compute Service] för att utföra anpassad resurshantering.
 translation-type: tm+mt
-source-git-commit: c392b8588929f7b13db13e42a3f17bbc4f68a376
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Många återgivningskrav, som konvertering till format och storleksändring av b
 >
 >[!DNL Asset Compute Service] är endast tillgängligt för användning med  [!DNL Experience Manager] som  [!DNL Cloud Service]en.
 
-De anpassade programmen är headless [Project Fire](https://github.com/AdobeDocs/project-firefly)-program. Det är enkelt att utöka [!DNL Asset Compute Service] med anpassade program via utvecklarverktygen [Asset compute SDK](https://github.com/adobe/asset-compute-sdk) och Project Firefly. Detta gör att utvecklare kan fokusera på affärslogik. Att skapa anpassade program är enkelt än att skapa en Adobe I/O Runtime-åtgärd utan vanliga servrar. Det är en enda Node.js JavaScript-funktion. Det [grundläggande anpassade programexemplet](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustrerar det.
+De anpassade programmen är headless [Project Fire](https://github.com/AdobeDocs/project-firefly)-program. Det är enkelt att utöka [!DNL Asset Compute Service] med anpassade program via utvecklarverktygen [Asset compute SDK](https://github.com/adobe/asset-compute-sdk) och Project Firefly. Detta gör att utvecklare kan fokusera på affärslogik. Att skapa anpassade program är lika enkelt som att skapa en enkel serverlös [!DNL Adobe I/O]-körningsåtgärd. Det är en enda Node.js JavaScript-funktion. Det [grundläggande anpassade programexemplet](https://github.com/adobe/asset-compute-example-workers/blob/master/projects/worker-basic/worker-basic.js) illustrerar det.
 
 ## Krav och etableringskrav {#prerequisites-and-provisioning}
 
@@ -29,7 +29,7 @@ Kontrollera att du uppfyller följande krav:
 * Experience Organization måste ha [!DNL Experience Manager] som [!DNL Cloud Service] aktiverat.
 * [!DNL Adobe Experience Cloud] är en del av förhandsgranskningsprogrammet för  [!DNL Project Firefly] utvecklare. Se [hur du ansöker om åtkomst](https://github.com/AdobeDocs/project-firefly/blob/master/overview/getting_access.md).
 * Se till att utvecklarrollen eller administratörsbehörigheten finns i organisationen för utvecklaren.
-* Kontrollera att [Adobe I/O CLI](https://github.com/adobe/aio-cli) är installerat lokalt.
+* Kontrollera att [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) är installerat lokalt.
 
 <!-- TBD for later:
 
