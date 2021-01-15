@@ -2,9 +2,9 @@
 title: Utveckla för [!DNL Asset Compute Service].
 description: Skapa anpassade program med  [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
@@ -282,7 +282,7 @@ På grund av den mer omfattande bearbetning som vanligtvis utförs av Asset comp
 
 Standardtidsgränsen för åtgärder i körtid är en minut, men den kan ökas genom att du anger gränsen `timeout` (i millisekunder). Om du förväntar dig att bearbeta större filer ökar du den här tiden. Tänk på hur lång tid det tar att hämta källan, bearbeta filen och överföra återgivningen. Om en åtgärd gör timeout, d.v.s. inte returnerar aktiveringen före den angivna tidsgränsen, ignoreras behållaren och återanvänds inte.
 
-Asset compute-applikationer är till sin natur ofta nätverks- och disk-I/O-bundna. Källfilen måste hämtas först, bearbetningen är ofta IO-tung och sedan överförs återgivningarna igen.
+Asset compute-applikationer är till sin natur ofta nätverks- och diskingångs- eller utdatabunden. Källfilen måste först laddas ned, bearbetningen är ofta resurskrävande och sedan överförs de resulterande återgivningarna igen.
 
 Minnet som är tillgängligt för en åtgärdsbehållare anges av `memorySize` i MB. För närvarande definierar detta även hur mycket processoråtkomst behållaren får, och viktigast av allt är det en viktig del av kostnaden för att använda körningsversionen (större behållare kostar mer). Använd ett större värde här när bearbetningen kräver mer minne eller processorkapacitet, men var noga med att inte slösa bort resurser eftersom ju större behållare det är, desto lägre blir den totala genomströmningen.
 
