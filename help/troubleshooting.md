@@ -2,9 +2,9 @@
 title: Felsök [!DNL Asset Compute Service].
 description: Felsök och felsök anpassade program med [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '288'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Några allmänna felsökningstips som kan hjälpa dig att felsöka med Asset com
 * Se till att eventuella fel som kan uppstå vid rensning vid fel inte genererar egna fel som döljer det ursprungliga problemet.
 
 * När utvecklingsverktyget startas för första gången med en ny [!DNL Asset Compute Service]-integrering, kan det misslyckas med den första bearbetningsbegäran eftersom Asset compute Events-journalen kanske inte är helt inställd. Vänta en stund tills journalen har konfigurerats innan du skickar en ny begäran.
-* Om det uppstår fel när du skickar begäranden från Asset compute `/register` eller `/process` ska du se till att alla nödvändiga API:er läggs till i [!DNL Adobe I/O] Project and Workspace, d.v.s. Asset compute, IO Events, IO Events Management och Runtime.
+* Om du stöter på fel när du skickar begäranden från Asset compute `/register` eller `/process` måste du se till att alla nödvändiga API:er läggs till i [!DNL Adobe I/O] Project and Workspace, d.v.s. Asset compute, [!DNL Adobe I/O] Events, [!DNL Adobe I/O] Events Management och [!DNL Adobe I/O] Runtime.
 
 ## Logga in problem via [!DNL Adobe I/O] CLI {#login-via-aio-cli}
 
