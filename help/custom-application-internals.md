@@ -2,9 +2,9 @@
 title: Förstå hur ett anpassat program fungerar.
 description: Internt arbete i  [!DNL Asset Compute Service] anpassat program för att förstå hur det fungerar.
 translation-type: tm+mt
-source-git-commit: 54afa44d8d662ee1499a385f504fca073ab6c347
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Använd följande bild för att förstå hela arbetsflödet när en digital resu
 
 ## Registrering {#registration}
 
-Klienten måste ringa [`/register`](api.md#register) en gång före den första begäran till [`/process`](api.md#process-request) för att kunna ställa in och hämta journal-URL:en för att ta emot Adobe I/O-händelser för Adobe Asset compute.
+Klienten måste anropa [`/register`](api.md#register) en gång före den första begäran till [`/process`](api.md#process-request) för att kunna ställa in och hämta journal-URL:en för att ta emot [!DNL Adobe I/O]-händelser för Adobe Asset compute.
 
 ```sh
 curl -X POST \
@@ -49,7 +49,7 @@ curl -X POST \
 
 Klienten ansvarar för att formatera återgivningarna korrekt med försignerade URL:er. JavaScript-biblioteket [`@adobe/node-cloud-blobstore-wrapper`](https://github.com/adobe/node-cloud-blobstore-wrapper#presigned-urls) kan användas i NodeJS-program för att försignera URL:er. För närvarande stöder biblioteket endast Azure Blob Storage och AWS S3-behållare.
 
-Bearbetningsbegäran returnerar en `requestId` som kan användas för avsökning av Adobe I/O-händelser.
+Bearbetningsbegäran returnerar en `requestId` som kan användas för avsökning av [!DNL Adobe I/O]-händelser.
 
 Nedan följer ett exempel på en anpassad begäran om programbearbetning.
 
@@ -71,7 +71,7 @@ Nedan följer ett exempel på en anpassad begäran om programbearbetning.
 
 [!DNL Asset Compute Service] skickar begäranden om anpassade programåtergivningar till det anpassade programmet. Den använder en HTTP-POST till den angivna program-URL:en, som är den skyddade webbåtgärds-URL:en från Project Fire. Alla förfrågningar använder HTTPS-protokollet för att maximera datasäkerheten.
 
-Den [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) som används av ett anpassat program hanterar HTTP-POSTENS begäran. Den hanterar också nedladdning av källan, överföring av återgivningar, sändning av I/O-händelser och felhantering.
+Den [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) som används av ett anpassat program hanterar HTTP-POSTENS begäran. Det hanterar också nedladdning av källan, överföring av återgivningar, sändning av [!DNL Adobe I/O]-händelser och felhantering.
 
 <!-- TBD: Add the application diagram. -->
 
@@ -115,13 +115,13 @@ När varje återgivning har skapats och lagrats i en fil med sökvägen som ange
 
 `batchWorker()` har ett annat beteende, eftersom det faktiskt bearbetar alla återgivningar och först när alla har bearbetats överförs dessa.
 
-## Adobe I/O Events {#aio-events}
+## [!DNL Adobe I/O] Händelser {#aio-events}
 
-SDK skickar Adobe I/O Events för varje rendering. Dessa händelser är antingen av typen `rendition_created` eller `rendition_failed` beroende på resultatet. Mer information om händelser finns i [asynkrona händelser](api.md#asynchronous-events) i Asset compute.
+SDK skickar [!DNL Adobe I/O] händelser för varje återgivning. Dessa händelser är antingen av typen `rendition_created` eller `rendition_failed` beroende på resultatet. Mer information om händelser finns i [asynkrona händelser](api.md#asynchronous-events) i Asset compute.
 
-## Ta emot Adobe I/O Events {#receive-aio-events}
+## Ta emot [!DNL Adobe I/O] händelser {#receive-aio-events}
 
-Klienten avsöker [Adobe I/O Events Journal](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) enligt dess konsumtionslogik. Den inledande journaladressen är den som anges i `/register` API-svaret. Händelser kan identifieras med `requestId` som finns i händelserna och är samma som returneras i `/process`. Varje återgivning har en separat händelse som skickas så snart återgivningen har överförts (eller misslyckats). När klienten tar emot en matchande händelse kan den visa eller på annat sätt hantera de resulterande återgivningarna.
+Klienten avsöker [[!DNL Adobe I/O] händelsjournal](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#/Journaling) enligt dess konsumtionslogik. Den inledande journaladressen är den som anges i `/register` API-svaret. Händelser kan identifieras med `requestId` som finns i händelserna och är samma som returneras i `/process`. Varje återgivning har en separat händelse som skickas så snart återgivningen har överförts (eller misslyckats). När klienten tar emot en matchande händelse kan den visa eller på annat sätt hantera de resulterande återgivningarna.
 
 JavaScript-biblioteket [`asset-compute-client`](https://github.com/adobe/asset-compute-client#usage) gör journalavsökningen enkel med metoden `waitActivation()` för att hämta alla händelser.
 
@@ -141,7 +141,7 @@ await Promise.all(events.map(event => {
 }));
 ```
 
-Mer information om hur du hämtar journalhändelser finns i [Adobe I/O Events API](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml).
+Mer information om hur du hämtar journalhändelser finns i [[!DNL Adobe I/O] Händelse-API](https://www.adobe.io/apis/experienceplatform/events/ioeventsapi.html#!adobedocs/adobeio-events/master/events-api-reference.yaml).
 
 <!-- TBD:
 * Illustration of the controls/data flow.
