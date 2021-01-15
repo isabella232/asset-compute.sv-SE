@@ -2,9 +2,9 @@
 title: '[!DNL Adobe Asset Compute Service] Användarhandbok.'
 description: Den här dokumentationen behandlar [!DNL Asset Compute Service] uppgifter som introduktion, hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod.
 translation-type: tm+mt
-source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '187'
 ht-degree: 1%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Om [!DNL Asset Compute Service]
 
-[!DNL Asset Compute Service] är en skalbar och utbyggbar tjänst i Adobe Experience Cloud för att bearbeta digitalt material. Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata, arkiv med mera. Utvecklare kan plugin-program (kallas även anpassade arbetare) för anpassade användningsfall som skapats med [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html) och körs på serverlösa [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html).
+[!DNL Asset Compute Service] är en skalbar och utbyggbar tjänst i Adobe Experience Cloud för att bearbeta digitalt material. Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata, arkiv med mera. Utvecklare kan plugin-program (som även kallas anpassade arbetare) för anpassade användningsfall som skapats med [Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html) och körs på serverlösa [[!DNL Adobe I/O] Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html).
 
 Denna dokumentation beskriver [!DNL Asset Compute Service] ämnen som hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod. Om du vill veta vad [!DNL Asset Compute Service]-erbjudandet är kan du läsa den här [introduktionen](introduction.md). Ta en titt på [vad tjänsten kan göra för dig](introduction.md#possible-use-cases-benefits).
 
