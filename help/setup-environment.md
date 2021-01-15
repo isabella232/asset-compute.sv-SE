@@ -2,9 +2,9 @@
 title: Ange den utvecklingsmiljö som krävs för [!DNL Asset Compute Service].
 description: Konfigurera utvecklarmiljön för [!DNL Asset Compute Service] att börja skapa och testa anpassad kod.
 translation-type: tm+mt
-source-git-commit: 0ecf2c044c7847029fb10ce37f4b831c58b93fe9
+source-git-commit: 7e520921ebb459c963d61d70c66497b8e62521cf
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Om du vill skapa en konfiguration som gör att du kan utveckla för [!DNL Asset 
    * [Docker Desktop](https://www.docker.com/get-started).
    * [NodeJS](https://nodejs.org) (v10 till v12 LTS, udda versioner rekommenderas inte) och  [NPM](https://www.npmjs.com). Användare av OSX HomeBrew kan göra `brew install node` för att installera båda. Annars kan du hämta den från [NodJS-hämtningssidan](https://nodejs.org/en/).
    * En IDE som är bra för NodeJS rekommenderar vi [Visual Studio Code (VS Code)](https://code.visualstudio.com) eftersom det är den IDE som stöds för felsökaren. Du kan använda vilken annan utvecklingsmiljö som helst som kodredigerare, men avancerad användning (t.ex. felsökare) stöds ännu inte.
-   * [AIO CLI](https://github.com/adobe/aio-cli) (`aio`) - installera med  `npm install -g @adobe/aio-cli`.
+   * [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`) - installera med  `npm install -g @adobe/aio-cli`.
 
 1. Kontrollera att [kraven](/help/understand-extensibility.md#prerequisites-and-provisioning) uppfylls.
 
