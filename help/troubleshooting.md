@@ -2,9 +2,9 @@
 title: Felsök [!DNL Asset Compute Service].
 description: Felsök och felsök anpassade program med [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 68d910cd092fccb599c361f24daff80460129e1c
+source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '290'
 ht-degree: 1%
 
 ---
@@ -19,17 +19,17 @@ Några allmänna felsökningstips som kan hjälpa dig att felsöka med Asset com
 * Se till att eventuella fel som kan uppstå vid rensning vid fel inte genererar egna fel som döljer det ursprungliga problemet.
 
 * När utvecklingsverktyget startas för första gången med en ny [!DNL Asset Compute Service]-integrering, kan det misslyckas med den första bearbetningsbegäran eftersom Asset compute Events-journalen kanske inte är helt inställd. Vänta en stund tills journalen har konfigurerats innan du skickar en ny begäran.
-* Om det uppstår fel när du skickar begäranden från Asset compute `/register` eller `/process` måste alla nödvändiga API:er läggas till i Adobe I/O Project and Workspace, d.v.s. Asset compute, IO Events, IO Events Management och Runtime.
+* Om det uppstår fel när du skickar begäranden från Asset compute `/register` eller `/process` ska du se till att alla nödvändiga API:er läggs till i [!DNL Adobe I/O] Project and Workspace, d.v.s. Asset compute, IO Events, IO Events Management och Runtime.
 
-## Logga in problem via Adobe I/O CLI {#login-via-aio-cli}
+## Logga in problem via [!DNL Adobe I/O] CLI {#login-via-aio-cli}
 
-Om du har problem med att logga in på [!DNL Adobe Developer Console] [via Adobe I/O CLI](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli) lägger du manuellt till de autentiseringsuppgifter som krävs för att utveckla, testa och distribuera ditt anpassade program:
+Om du har problem med att logga in på [!DNL Adobe Developer Console] [via  [!DNL Adobe I/O] CLI](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli) lägger du manuellt till de autentiseringsuppgifter som krävs för utveckling, testning och distribution av ditt anpassade program:
 
 1. Navigera till ditt Firefoly-projekt och din arbetsyta på [Adobe Developer Console](https://console.adobe.io/) och tryck på **[!UICONTROL Hämta]** från det övre högra hörnet. Öppna den här filen och spara denna JSON på en säker plats på datorn.
 
 1. Navigera till ENV-filen i ditt Fireworks-program.
 
-1. Lägg till Adobe I/O Runtime-autentiseringsuppgifter. Hämta Adobe I/O Runtime-inloggningsuppgifterna från det hämtade JSON-programmet. Autentiseringsuppgifterna är under `project.workspace.services.runtime`. Lägg till I/O-körningsuppgifter i `AIO_runtime_XXX`-variablerna:
+1. Lägg till inloggningsuppgifterna för [!DNL Adobe I/O]-miljön. Hämta inloggningsuppgifterna för [!DNL Adobe I/O] A Runtime från den hämtade JSON:n. Autentiseringsuppgifterna är under `project.workspace.services.runtime`. Lägg till [!DNL Adobe I/O]-autentiseringsuppgifterna för körning i `AIO_runtime_XXX`-variablerna:
 
    ```json
    AIO_runtime_auth=
