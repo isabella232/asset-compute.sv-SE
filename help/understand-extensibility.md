@@ -1,8 +1,8 @@
 ---
-title: Lär dig mer om att utöka [!DNL Asset Compute Service].
+title: Förstå om att utöka [!DNL Asset Compute Service]
 description: När och hur du ska utöka funktionen [!DNL Asset Compute Service] för att utföra anpassad resurshantering.
 translation-type: tm+mt
-source-git-commit: d26ae470507e187249a472ececf5f08d803a636c
+source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
 workflow-type: tm+mt
 source-wordcount: '259'
 ht-degree: 0%
