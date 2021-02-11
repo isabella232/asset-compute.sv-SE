@@ -2,9 +2,9 @@
 title: Utveckla för [!DNL Asset Compute Service]
 description: Skapa anpassade program med  [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+source-git-commit: 33b72b164faeda2dd425656209790f019ccec96e
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -96,11 +96,14 @@ Lägg till följande inloggningsuppgifter för utvecklingsverktyget i ENV-filen 
    ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=
    ```
 
-1. Om `console.json` inte finns i roten direkt i din Fireworks-app lägger du till den absoluta sökvägen till JSON-filen för integrering i Adobe Developer Console. Det här är samma [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user)-fil som hämtas på din projektarbetsyta. Du kan också använda kommandot `aio app use <path_to_console_json>` i stället för att lägga till sökvägen till ENV-filen.
+1. Hämta filen från Adobe Developer Console. Gå till projektets rot och klicka på &quot;Hämta alla&quot; i det övre högra hörnet. Filen hämtas med `<namespace>-<workspace>.json` som filnamn. Gör något av följande:
 
-   ```conf
-   ASSET_COMPUTE_INTEGRATION_FILE_PATH=
-   ```
+   * Byt namn på filen till `config.json` och flytta den i projektets rot.
+   * Du kan också lägga till den absoluta sökvägen till JSON-filen för integrering i Adobe Developer Console. Det här är samma [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user)-fil som hämtas på din projektarbetsyta.
+
+      ```conf
+      ASSET_COMPUTE_INTEGRATION_FILE_PATH=
+      ```
 
 1. Lägg till autentiseringsuppgifter för S3 eller Azure-lagring. Du behöver bara tillgång till en molnlagringslösning.
 
@@ -116,6 +119,10 @@ Lägg till följande inloggningsuppgifter för utvecklingsverktyget i ENV-filen 
    AZURE_STORAGE_KEY=
    AZURE_STORAGE_CONTAINER_NAME=
    ```
+
+>[!TIP]
+>
+>Filen `config.json` innehåller autentiseringsuppgifter. Lägg till JSON-filen i din `.gitignore`-fil i projektet för att förhindra att den delas. Samma sak gäller för .env- och .aio-filerna.
 
 ## Kör programmet {#run-custom-application}
 
