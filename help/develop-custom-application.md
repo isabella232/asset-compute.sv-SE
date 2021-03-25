@@ -2,7 +2,7 @@
 title: Utveckla för [!DNL Asset Compute Service]
 description: Skapa anpassade program med  [!DNL Asset Compute Service].
 translation-type: tm+mt
-source-git-commit: 33b72b164faeda2dd425656209790f019ccec96e
+source-git-commit: 7ae47fdb7ff91e1388d2037d90abe35fe5218216
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Lägg till följande inloggningsuppgifter för utvecklingsverktyget i ENV-filen 
 
 1. Hämta filen från Adobe Developer Console. Gå till projektets rot och klicka på &quot;Hämta alla&quot; i det övre högra hörnet. Filen hämtas med `<namespace>-<workspace>.json` som filnamn. Gör något av följande:
 
-   * Byt namn på filen till `config.json` och flytta den i projektets rot.
+   * Byt namn på filen till `console.json` och flytta den i projektets rot.
    * Du kan också lägga till den absoluta sökvägen till JSON-filen för integrering i Adobe Developer Console. Det här är samma [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user)-fil som hämtas på din projektarbetsyta.
 
       ```conf
