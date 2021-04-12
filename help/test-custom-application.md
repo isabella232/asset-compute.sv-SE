@@ -1,14 +1,14 @@
 ---
 title: Testa och felsöka  [!DNL Asset Compute Service] anpassade program
 description: Testa och felsök  [!DNL Asset Compute Service] anpassade program.
+exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
 translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+source-git-commit: 9bc1534671c81a05798f98ae556d348bc771d975
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
-
 
 # Testa och felsöka ett anpassat program {#test-debug-custom-worker}
 
@@ -21,7 +21,7 @@ $ aio app test
 ```
 
 <!-- TBD
-To run tests for a custom application, run `adobe-asset-compute test-worker` command in the root of the custom application application application.
+To run tests for a custom application, run `aio asset-compute test-worker` command at the root of the custom application application.
 
 Document interactively running `adobe-asset-compute` commands `test-worker` and `run-worker`.
 -->
@@ -173,8 +173,8 @@ Många av dessa steg automatiseras vanligtvis av `aio` ur rutan, se avsnittet Fe
 1. Lägg till i JSON-filen för användarinställningar. Den nya felsökaren för VS-kod fortsätter att använda, men har [vissa problem](https://github.com/apache/openwhisk-wskdebug/issues/74) med wskdebug: `"debug.javascript.usePreview": false`.
 1. Stäng alla instanser av program som är öppna via `aio app run`.
 1. Distribuera den senaste koden med `aio app deploy`.
-1. Kör bara utvecklingsverktyget Asset compute med `npx adobe-asset-compute devtool`. Håll den öppen.
-1. I VS-kodredigeraren lägger du till nedanstående felsökningskonfiguration i din `launch.json`:
+1. Kör bara utvecklingsverktyget Asset compute med `aio asset-compute devtool`. Håll den öppen.
+1. I VS-kodredigeraren lägger du till följande felsökningskonfiguration i din `launch.json`:
 
    ```json
    {
@@ -195,11 +195,11 @@ Många av dessa steg automatiseras vanligtvis av `aio` ur rutan, se avsnittet Fe
    }
    ```
 
-   Hämta ÅTGÄRDENS NAMN från utdata för `aio app deploy`. Det ser ut som `Your deployed actions -> TypicalCoffeeCat-0.0.1/__secured_worker`.
+   Hämta `ACTION NAME` från utdata för `aio app deploy`.
 
 1. Välj `wskdebug worker` i konfigurationen för kör/felsök och tryck på uppspelningsikonen. Vänta tills den visas **[!UICONTROL Klart för aktiveringar]** i fönstret **[!UICONTROL Debug Console]**.
 
-1. Klicka på **[!UICONTROL run]** i utvecklingsverktyget. Du kan se åtgärderna som körs i VS-kodredigeraren och loggarna visas.
+1. Klicka på **[!UICONTROL run]** i utvecklingsverktyget. Du kan se vilka åtgärder som körs i VS-kodredigeraren och loggarna visas.
 
 1. Ange en brytpunkt i koden, kör igen och det ska tryckas.
 
