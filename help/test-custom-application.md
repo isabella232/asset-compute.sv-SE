@@ -2,10 +2,9 @@
 title: Testa och felsöka  [!DNL Asset Compute Service] anpassade program
 description: Testa och felsök  [!DNL Asset Compute Service] anpassade program.
 exl-id: c2534904-0a07-465e-acea-3cb578d3bc08
-translation-type: tm+mt
-source-git-commit: 9bc1534671c81a05798f98ae556d348bc771d975
+source-git-commit: ebc0d717b3f6fc4518f4a79cd44ebe8fdcf9ec6a
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -137,6 +136,10 @@ tests/
 ### Testa förväntade fel {#test-unexpected-errors}
 
 Feltestfall ska inte innehålla en förväntad `rendition.*`-fil och ska definiera den förväntade `errorReason` inuti `params.json`-filen.
+
+>[!NOTE]
+>
+>Om ett testfall inte innehåller en förväntad `rendition.*`-fil och inte definierar den förväntade `errorReason` inuti `params.json`-filen, antas det vara ett felfall med en `errorReason`-fil.
 
 Struktur för feltest:
 
