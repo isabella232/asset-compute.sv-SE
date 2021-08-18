@@ -1,16 +1,15 @@
 ---
 title: '[!DNL Asset Compute Service] HTTP-API'
 description: '[!DNL Asset Compute Service] HTTP API för att skapa anpassade program.'
-translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+exl-id: 4b63fdf9-9c0d-4af7-839d-a95e07509750
+source-git-commit: 780ddb7e119a28a1f8cc555ed2f1d3cee543b73f
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 1%
 
 ---
 
-
-# [!DNL Asset Compute Service] HTTP-API  {#asset-compute-http-api}
+# [!DNL Asset Compute Service] HTTP-API {#asset-compute-http-api}
 
 API:t används endast i utvecklingssyfte. API:t anges som ett sammanhang när du utvecklar anpassade program. [!DNL Adobe Experience Manager] som  [!DNL Cloud Service] använder API:t för att skicka bearbetningsinformationen till ett anpassat program. Mer information finns i [Använda resursmikrotjänster och Bearbeta profiler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html).
 
@@ -82,7 +81,7 @@ Varje klient för [!DNL Asset Compute service] - ett unikt [!DNL Adobe Developer
 
 När livscykeln är slut kan en klient [avregistrera](#unregister-request).
 
-### Registrera begäran {#register-request}
+### Registrera förfrågan {#register-request}
 
 Detta API-anrop konfigurerar en [!DNL Asset Compute]-klient och tillhandahåller händelsens journal-URL. Det här är en depotent åtgärd och behöver bara anropas en gång för varje klient. Den kan anropas igen för att hämta journal-URL:en.
 
@@ -139,7 +138,7 @@ HTTP-statuskoderna är:
    }
    ```
 
-### Avregistrera begäran {#unregister-request}
+### Avregistrera förfrågan {#unregister-request}
 
 Detta API-anrop avregistrerar en [!DNL Asset Compute]-klient. Därefter går det inte längre att ringa `/process`. Om API-anropet för en oregistrerad klient eller en ännu inte registrerad klient används returneras ett `404`-fel.
 
@@ -220,7 +219,7 @@ Binärfiler refereras med URL:er, som försignerade URL:er för Amazon AWS S3 el
 | Rubrik `x-request-id` | Valfritt, kan anges av klienterna för en unik end-to-end-identifierare för bearbetningsbegäranden i olika system. |
 | Begärandetext | Måste vara i JSON-format för processbegäran enligt beskrivningen nedan. Den innehåller instruktioner om vilken resurs som ska bearbetas och vilka renderingar som ska genereras. |
 
-### Bearbeta JSON {#process-request-json}
+### Bearbeta begäran JSON {#process-request-json}
 
 Begärandetexten för `/process` är ett JSON-objekt med detta högnivåschema:
 
@@ -260,7 +259,7 @@ De tillgängliga fälten är:
 | `size` | `number` | Källresursens filstorlek i byte. Har prioritet framför `content-length`-huvudet för den binära resursen. | `10234` |
 | `mimetype` | `string` | MIME-typ för källresursfil. Prioriterar `content-type`-huvudet för den binära resursen. | `"image/jpeg"` |
 
-### Ett fullständigt `process`-begärandeexempel {#complete-process-request-example}
+### Ett komplett `process`-frågeexempel {#complete-process-request-example}
 
 ```json
 {
@@ -343,18 +342,18 @@ Statuskoder:
    }
    ```
 
-De flesta klienter vill troligen försöka utföra exakt samma begäran igen med [exponentiell säkerhetskopiering](https://en.wikipedia.org/wiki/Exponential_backoff) på ett fel *förutom konfigurationsproblem som 401 eller 403, eller ogiltiga begäranden som 400.* Förutom en vanlig hastighetsbegränsning via 429 svar, kan ett tillfälligt avbrott eller en tillfällig begränsning leda till 5 x fel. Det vore då tillrådligt att försöka igen efter en viss tid.
+De flesta klienter vill troligen försöka utföra exakt samma begäran igen med [exponentiell säkerhetskopiering](https://en.wikipedia.org/wiki/Exponential_backoff) på ett fel *förutom konfigurationsproblem som 401 eller 403, eller ogiltiga begäranden som 400.* Förutom en vanlig hastighetsbegränsning via 429 svar kan ett tillfälligt avbrott eller en tillfällig begränsning leda till 5 x fel. Det vore då tillrådligt att försöka igen efter en viss tid.
 
 Alla JSON-svar (om sådana finns) innehåller `requestId` som är samma värde som `X-Request-Id`-huvudet. Du bör läsa från rubriken eftersom den alltid finns. `requestId` returneras också i alla händelser som är relaterade till bearbetning av begäranden som `requestId`. Klienterna får inte anta något om formatet för den här strängen, det är en ogenomskinlig strängidentifierare.
 
-## Anmäl dig till efterbearbetningen {#opt-in-to-post-processing}
+## Anmäl dig till efterbearbetning {#opt-in-to-post-processing}
 
 [Asset compute SDK](https://github.com/adobe/asset-compute-sdk) har stöd för en uppsättning grundläggande alternativ för efterbearbetning av bilder. Anpassade arbetare kan uttryckligen välja att efterbearbeta genom att ställa in fältet `postProcess` för återgivningsobjektet på `true`.
 
 De användningsområden som stöds är:
 
 * Beskär en återgivning till en rektangel vars gränser definieras av crop.w, crop.h, crop.x och crop.y. Den definieras av `instructions.crop` i återgivningsobjektet.
-* Ändra storlek på bilder med bredden, höjden eller båda. Den definieras av `instructions.width` och `instructions.height` i återgivningsobjektet. Om du bara vill ändra storlek med bredd eller höjd anger du bara ett värde. Beräkningstjänsten bevarar proportionerna.
+* Ändra storlek på bilder med bredd, höjd eller båda. Den definieras av `instructions.width` och `instructions.height` i återgivningsobjektet. Om du bara vill ändra storlek med bredd eller höjd anger du bara ett värde. Beräkningstjänsten bevarar proportionerna.
 * Ange kvalitet för en JPEG-bild. Den definieras av `instructions.quality` i återgivningsobjektet. Den bästa kvaliteten anges med `100` och lägre värden anger minskad kvalitet.
 * Skapa sammanflätade bilder. Den definieras av `instructions.interlace` i återgivningsobjektet.
 * Ange DPI för att justera den återgivna storleken för DPI-publicering genom att justera den skala som används på pixlarna. Det definieras av `instructions.dpi` i återgivningsobjektet för att ändra dpi-upplösningen. Om du vill ändra storlek på bilden så att den får samma storlek med en annan upplösning använder du `convertToDpi`-instruktionerna.
@@ -370,14 +369,14 @@ Vattenstämplar görs under efterbearbetningen av återgivningen. För vattenst�
 
 Detta är de tillgängliga alternativen för `renditions`-arrayen i [/process](#process-request).
 
-### Gemensamma fält {#common-fields}
+### Vanliga fält {#common-fields}
 
 | Namn | Typ | Beskrivning | Exempel |
 |-------------------|----------|-------------|---------|
 | `fmt` | `string` | Målformatet för återgivningarna kan också vara `text` för textrahering och `xmp` för att extrahera XMP metadata som xml. Se [format som stöds](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
 | `worker` | `string` | URL för ett [anpassat program](develop-custom-application.md). Måste vara en `https://`-URL. Om det här fältet finns skapas återgivningen av ett anpassat program. Alla andra inställda återgivningsfält används sedan i det anpassade programmet. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | URL som den genererade återgivningen ska överföras till med HTTP PUT. | `http://w.com/img.jpg` |
-| `target` | `object` | Multipart-försignerad URL-överföringsinformation för den genererade återgivningen. Detta är för [AEM/Oak Direct Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) med detta [flerdelsöverföringsbeteende](http://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>fält:<ul><li>`urls`: array med strängar, en för varje försignerad del-URL</li><li>`minPartSize`: den minsta storleken som ska användas för en del = url</li><li>`maxPartSize`: maxstorleken som ska användas för en del = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
+| `target` | `object` | Multipart-försignerad URL-överföringsinformation för den genererade återgivningen. Detta är för [AEM/Oak Direct Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) med detta [flerdelsöverföringsbeteende](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>fält:<ul><li>`urls`: array med strängar, en för varje försignerad del-URL</li><li>`minPartSize`: den minsta storleken som ska användas för en del = url</li><li>`maxPartSize`: maxstorleken som ska användas för en del = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
 | `userData` | `object` | Valfritt reserverat utrymme som styrs av klienten och skickas som det är till renderingshändelser. Tillåter klienter att lägga till anpassad information för att identifiera renderingshändelser. Får inte ändras eller förlitas i anpassade program, eftersom kunderna kan ändra detta när som helst. | `{ ... }` |
 
 ### Återgivningsspecifika fält {#rendition-specific-fields}
@@ -401,7 +400,7 @@ En lista över de filformat som stöds finns i [Filformat som stöds](https://ex
 | `duplicate` | `string` | Duplicerad hantering för ZIP-arkiv (`fmt=zip`). Som standard genererar flera filer som lagras under samma sökväg i ZIP ett fel. Om du ställer in `duplicate` på `ignore` sparas bara den första resursen och resten ignoreras. | `ignore` |
 | `watermark` | `object` | Innehåller instruktioner om [vattenstämpeln](#watermark-specific-fields). |  |
 
-### Vattenstämpelspecifika fält {#watermark-specific-fields}
+### Vattenstämpelsspecifika fält {#watermark-specific-fields}
 
 PNG-formatet används som vattenstämpel.
 
