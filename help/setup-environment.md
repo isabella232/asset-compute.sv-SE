@@ -2,9 +2,9 @@
 title: Ange den utvecklingsmiljö som krävs för [!DNL Asset Compute Service]
 description: Konfigurera utvecklarmiljön för [!DNL Asset Compute Service] att börja skapa och testa anpassad kod.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
+source-git-commit: 9404ffcc66a3b6ba206155d1b1a5c16a43e22a39
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ Om du vill skapa en konfiguration som gör att du kan utveckla för [!DNL Asset 
    * [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) (`aio`) - installera med  `npm install -g @adobe/aio-cli@7.1.0`.
 
 1. Kontrollera att [kraven](/help/understand-extensibility.md#prerequisites-and-provisioning) uppfylls.
+
+>[!NOTE]
+>
+>Använd för närvarande [!DNL Adobe I/O] CLI v7.1.0 i och använd inte [!DNL Adobe I/O] CLI v8.
 
 ## Konfigurera ett Fireworks {#create-firefly-project}
 
