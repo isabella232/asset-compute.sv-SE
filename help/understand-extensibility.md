@@ -1,14 +1,13 @@
 ---
 title: Förstå om att utöka [!DNL Asset Compute Service]
 description: När och hur du ska utöka funktionen [!DNL Asset Compute Service] för att utföra anpassad resurshantering.
-translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+exl-id: 3b903364-34cc-44d5-9a03-24a0102cf85d
+source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
-
 
 # Introduktion till utökningsbarhet {#introduction-to-extensibilty}
 
@@ -25,9 +24,9 @@ De anpassade programmen är headless [Project Fire](https://github.com/AdobeDocs
 Kontrollera att du uppfyller följande krav:
 
 * Project Fire-verktygen är installerade på datorn.
-* En [!DNL Experience Cloud]-organisation. Mer information [här](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/setup.md#acquire-access-and-credentials).
+* En [!DNL Experience Cloud]-organisation. Mer information [här](https://www.adobe.io/project-firefly/docs/getting_started/#acquire-access-and-credentials).
 * Experience Organization måste ha [!DNL Experience Manager] som [!DNL Cloud Service] aktiverat.
-* [!DNL Adobe Experience Cloud] är en del av förhandsgranskningsprogrammet för  [!DNL Project Firefly] utvecklare. Se [hur du ansöker om åtkomst](https://github.com/AdobeDocs/project-firefly/blob/master/overview/getting_access.md).
+* [!DNL Adobe Experience Cloud] är en del av förhandsgranskningsprogrammet för  [!DNL Project Firefly] utvecklare. Se [hur du ansöker om åtkomst](https://www.adobe.io/project-firefly/docs/overview/getting_access/).
 * Se till att utvecklarrollen eller administratörsbehörigheten finns i organisationen för utvecklaren.
 * Kontrollera att [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) är installerat lokalt.
 

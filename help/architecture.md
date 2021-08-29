@@ -1,14 +1,13 @@
 ---
 title: Arkitektur för [!DNL Asset Compute Service]
 description: Hur [!DNL Asset Compute Service] API, program och SDK fungerar tillsammans för att tillhandahålla en molnbaserad resurshanteringstjänst.
-translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+exl-id: 658ee4b7-5eb1-4109-b263-1b7d705e49d6
+source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%
 
 ---
-
 
 # Arkitektur för [!DNL Asset Compute Service] {#overview}
 
@@ -41,7 +40,7 @@ Arkitekturen består av följande delar:
 <!-- TBD:
 
 * About the YAML file?
-* See [https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application).
+* See [https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
 
 * minimize description to custom applications
 * remove all internal stuff (e.g. Photoshop application, API Gateway) from text and diagram

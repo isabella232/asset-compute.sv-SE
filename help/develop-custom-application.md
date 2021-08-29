@@ -1,14 +1,13 @@
 ---
 title: Utveckla för [!DNL Asset Compute Service]
 description: Skapa anpassade program med  [!DNL Asset Compute Service].
-translation-type: tm+mt
-source-git-commit: 7ae47fdb7ff91e1388d2037d90abe35fe5218216
+exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
+source-git-commit: eed9da4b20fe37a4e44ba270c197505b50cfe77f
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1605'
 ht-degree: 0%
 
 ---
-
 
 # Utveckla ett anpassat program {#develop}
 
@@ -22,11 +21,11 @@ Innan du börjar utveckla ett anpassat program:
 
 Kontrollera att [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) är installerat lokalt.
 
-1. Om du vill skapa ett anpassat program [skapar du en Firefoly-app](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#4-bootstrapping-new-app-using-the-cli). Om du vill göra det kör du `aio app init <app-name>` i terminalen.
+1. Om du vill skapa ett anpassat program [skapar du en Firefoly-app](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Om du vill göra det kör du `aio app init <app-name>` i terminalen.
 
-   Om du inte redan har loggat in uppmanar det här kommandot en webbläsare att be dig logga in på [Adobe Developer Console](https://console.adobe.io/) med din Adobe ID. Mer information om hur du loggar in från klippet finns i [här](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#3-signing-in-from-cli).
+   Om du inte redan har loggat in uppmanar det här kommandot en webbläsare att be dig logga in på [Adobe Developer Console](https://console.adobe.io/) med din Adobe ID. Mer information om hur du loggar in från klippet finns i [här](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli).
 
-   Adobe rekommenderar att du loggar in. Om du har problem följer du instruktionerna [för att skapa en app utan att logga in](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   Adobe rekommenderar att du loggar in. Om du har problem följer du instruktionerna [för att skapa en app utan att logga in](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
 1. När du har loggat in följer du instruktionerna i CLI och väljer `Organization`, `Project` och `Workspace` som ska användas för programmet. Välj det projekt och den arbetsyta som du skapade när du [konfigurerade miljön](setup-environment.md).
 
@@ -61,7 +60,7 @@ Kontrollera att [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) är ins
 
 1. Följ resten av instruktionerna och öppna det nya programmet i Visual Studio Code (eller din favoritkodredigerare). Den innehåller ställningar och exempelkod för ett anpassat program.
 
-   Läs här om [huvudkomponenterna i en Firefly-app](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#5-anatomy-of-a-project-firefly-application).
+   Läs här om [huvudkomponenterna i en Firefly-app](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
 
    Mallprogrammet använder vår [Asset compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) för att överföra, hämta och organisera programåtergivningar så att utvecklare bara behöver implementera den anpassade programlogiken. I mappen `actions/<worker-name>` är filen `index.js` den plats där den anpassade programkoden ska läggas till.
 
@@ -99,7 +98,7 @@ Lägg till följande inloggningsuppgifter för utvecklingsverktyget i ENV-filen 
 1. Hämta filen från Adobe Developer Console. Gå till projektets rot och klicka på &quot;Hämta alla&quot; i det övre högra hörnet. Filen hämtas med `<namespace>-<workspace>.json` som filnamn. Gör något av följande:
 
    * Byt namn på filen till `console.json` och flytta den i projektets rot.
-   * Du kan också lägga till den absoluta sökvägen till JSON-filen för integrering i Adobe Developer Console. Det här är samma [`console.json`](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user)-fil som hämtas på din projektarbetsyta.
+   * Du kan också lägga till den absoluta sökvägen till JSON-filen för integrering i Adobe Developer Console. Det här är samma [`console.json`](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user)-fil som hämtas på din projektarbetsyta.
 
       ```conf
       ASSET_COMPUTE_INTEGRATION_FILE_PATH=
@@ -145,7 +144,7 @@ Om du vill köra programmet i utvecklingsverktyget använder du kommandot `aio a
 
 Se [här](test-custom-application.md) hur du testar och felsöker programmet. När du är klar med utvecklingen av ditt anpassade program ska du [distribuera ditt anpassade program](deploy-custom-application.md).
 
-## Prova det exempelprogram som tillhandahålls av Adobe {#try-sample}
+## Prova exempelprogrammet från Adobe {#try-sample}
 
 Följande är exempel på anpassade program:
 
@@ -192,7 +191,7 @@ exports.main = worker(async function (source, rendition) {
 >For extra authorization for these API calls, see [custom authorization checks](#custom-authorization-checks).
 -->
 
-### Skicka anpassade parametrar {#pass-custom-parameters}
+### Skicka egna parametrar {#pass-custom-parameters}
 
 Du kan skicka egna definierade parametrar via återgivningsobjekten. De kan refereras inuti programmet i [`rendition`-instruktioner](https://github.com/adobe/asset-compute-sdk#rendition). Ett exempel på ett återgivningsobjekt är:
 
@@ -236,7 +235,7 @@ const clientId = params.auth.clientId; // Technical Account client Id
 const orgId = params.auth.orgId; // Experience Cloud Organization
 ```
 
-### Skicka autentiseringsuppgifter för tredjepartssystem {#pass-credentials-for-tp}
+### Skicka autentiseringsuppgifter för system från tredje part {#pass-credentials-for-tp}
 
 Om du vill hantera autentiseringsuppgifter för andra externa tjänster skickar du dessa som standardparametrar för åtgärderna. Dessa krypteras automatiskt under överföring. Mer information finns i [skapa åtgärder i Utvecklarhandbok för körtid](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/creating_actions.md). Ange dem sedan med hjälp av miljövariabler under distributionen. De här parametrarna kan nås i `params`-objektet inuti åtgärden.
 
@@ -271,7 +270,7 @@ För produktionsdistribution kan du ange miljövariabler i CI-systemet, till exe
 const key = params.secretKey;
 ```
 
-## Anpassa storlek på program {#sizing-workers}
+## Storleksändra program {#sizing-workers}
 
 Ett program körs i en behållare i [!DNL Adobe I/O]-miljön med [begränsningar](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) som kan konfigureras via `manifest.yml`:
 
