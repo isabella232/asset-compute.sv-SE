@@ -7,22 +7,15 @@ role: Developer
 user-guide-title: asset compute Service Guide
 user-guide-description: Den här dokumentationen behandlar [!DNL Asset Compute Service] uppgifter som hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod.
 breadcrumb-title: asset compute Service Guide
-breadcrumb-url: /docs/asset-compute/using/home.html
-solution-title: AEM Assets
-solution-hub-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html
-getting-started-url: https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html
-tutorials-title: AEM Tutorials
-tutorials-url: https://experienceleague.adobe.com/docs/experience-manager-learn/assets/overview.html
-translation-type: tm+mt
-source-git-commit: 3f306f2006ba1520ea5266a93a7912720f96b412
+source-git-commit: c4f224a2ee99e78018a7a3f43ec59907f05ea4ef
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '98'
 ht-degree: 10%
 
 ---
 
 
-# Användarhandbok för Asset compute-tjänsten {#using}
+# Användarhandbok för Asset compute Service {#using}
 
 + [Användarhandbok för Asset compute Service](home.md)
 + [Översikt](introduction.md)
