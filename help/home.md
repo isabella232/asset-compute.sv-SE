@@ -2,10 +2,10 @@
 title: '[!DNL Adobe Asset Compute Service] Användarhandbok'
 description: Den här dokumentationen behandlar [!DNL Asset Compute Service] uppgifter som introduktion, hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod.
 exl-id: 5acf87d1-a391-4802-bfce-e367fc8564df
-source-git-commit: a2460a0719f8c585ed72e44c904aa0df33301032
+source-git-commit: daa13e422e16f5832ad3275e310bd98aa34f6c2f
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 1%
+source-wordcount: '221'
+ht-degree: 0%
 
 ---
 
@@ -18,6 +18,8 @@ Denna dokumentation beskriver [!DNL Asset Compute Service] ämnen som hur du utv
 [!DNL Asset Compute Service] har stöd för konvertering av många filformat och kan integreras med många av Adobes tjänster. Se listan över [filformat och tjänster som stöds](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 Se en översikt över [de mikrotjänster för resurser som finns i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) och hur du använder mikrotjänsterna i [!DNL Experience Manager].
+
+[!DNL Asset Compute Service] Utbyggbarhet utvecklas under en öppen utvecklingsmodell på  [github.com/](https://github.com/adobe) adobebe som tar emot bidrag från utbyggnadsutvecklare. Alla komponenter som är relevanta för att utveckla, skapa, testa och distribuera anpassade program är öppen källkod. Se [hur och var du ska bidra till beräkningstjänsten](contribute-to-compute-service.md).
 
 <!--
 Possible to record the below info here in this landing page to centralize the miscellaneous info about Asset Compute Service?
