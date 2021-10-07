@@ -1,9 +1,8 @@
 ---
-source-git-commit: 78c1246f5fc42006013701a6cf4d375a1d8c9fd8
+source-git-commit: c0fd9623ad09443a99695352743a165744961758
 workflow-type: tm+mt
-translation-type: tm+mt
-source-wordcount: '646'
-ht-degree: 5%
+source-wordcount: '648'
+ht-degree: 4%
 
 ---
 # Riktlinjer för att bidra till dokumentationen
@@ -32,7 +31,7 @@ Undantag från den här regeln är versionsinformation där kända problem kan l
 
 Alla idéer du kan behöva förbättra dokumentationen är välkomna som bidrag. Kommentarer, utgåvor och pull-begäranden är dock endast avsedda för *bidrag*. De är inte avsedda att användas för att besvara dina frågor om hur du använder produkten, implementerar projekt eller löser tekniska problem.
 
-Frågor om användning eller tekniska fel som du kan ha rapporterat via den normala supportprocessen via [[!DNL Experience Cloud] Enterprise Support-portalen](https://helpx.adobe.com/se/contact/enterprise-support.ec.html) eller som diskuterats i [[!DNL Experience Manager] communityn](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
+Frågor om användning eller tekniska fel som du kan ha rapporterat via den normala supportprocessen via [[!DNL Experience Manager] kundsupportportalen](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home) eller som diskuterats i [[!DNL Experience Manager] communityn](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community).
 
 Dokumentationsbidragen ersätter inte Adobe kundtjänst*** och eventuella bidrag som söker svar på supportrelaterade frågor kommer att refuseras.
 
@@ -58,7 +57,7 @@ Genom att följa dessa riktlinjer blir det enklare att granska ditt bidrag och d
 
 Kom ihåg att läsarna av dokumentationen är från hela världen och inte kan förväntas vara inbyggda eller flytande engelska. Undvik kollokvialism och håll språket så tydligt och enkelt som möjligt.
 
-#### Följ Microsoft-formathandboken
+#### Följ Microsoft formathandbok
 
 [Microsoft Manual of ](https://docs.microsoft.com/en-us/style-guide/welcome/) Style är en kostnadsfri handbok för dokumentationsformat som fokuserar på programvarudokumentation.
 
