@@ -1,14 +1,13 @@
 ---
 title: Introduktion till  [!DNL Asset Compute Service]
 description: '[!DNL Asset Compute Service] är en molnbaserad resurshanteringstjänst som minskar komplexiteten och förbättrar skalbarheten.'
-translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+exl-id: f8c89f65-5a94-44f3-aaac-4612ae291101
+source-git-commit: a2460a0719f8c585ed72e44c904aa0df33301032
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
-
 
 # Översikt över [!DNL Asset Compute Service] {#overview}
 
@@ -48,7 +47,6 @@ Du kan använda webbtjänsten [!DNL Asset Compute] för att generera miniatyrer 
 >* [Översikt över tillgångsbearbetning med tillgångsmikrotjänster  [!DNL Adobe Experience Manager] som en [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
 >* [Dokumentation om Project Fire](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
 >* [Filformat som kan bearbetas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
->* [Versionsinformation om tjänsten Asset compute](release-notes.md)
 
 
 <!-- **TBD:**

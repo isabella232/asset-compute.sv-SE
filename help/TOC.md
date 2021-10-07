@@ -7,9 +7,9 @@ role: Developer
 user-guide-title: asset compute Service Guide
 user-guide-description: Den här dokumentationen behandlar [!DNL Asset Compute Service] uppgifter som hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod.
 breadcrumb-title: asset compute Service Guide
-source-git-commit: c4f224a2ee99e78018a7a3f43ec59907f05ea4ef
+source-git-commit: a2460a0719f8c585ed72e44c904aa0df33301032
 workflow-type: tm+mt
-source-wordcount: '98'
+source-wordcount: '96'
 ht-degree: 10%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 10%
 
 + [Användarhandbok för Asset compute Service](home.md)
 + [Översikt](introduction.md)
-+ [Versionsinformation](release-notes.md)
 + [Filformat som stöds](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html)
 + [Arkitektur](architecture.md)
 + [API-referenser](api.md)

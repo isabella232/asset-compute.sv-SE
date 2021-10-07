@@ -1,14 +1,13 @@
 ---
 title: '[!DNL Adobe Asset Compute Service] Användarhandbok'
 description: Den här dokumentationen behandlar [!DNL Asset Compute Service] uppgifter som introduktion, hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod.
-translation-type: tm+mt
-source-git-commit: 95e384d2a298b3237d4f93673161272744e7f44a
+exl-id: 5acf87d1-a391-4802-bfce-e367fc8564df
+source-git-commit: a2460a0719f8c585ed72e44c904aa0df33301032
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '175'
 ht-degree: 1%
 
 ---
-
 
 # Om [!DNL Asset Compute Service]
 
@@ -16,9 +15,7 @@ ht-degree: 1%
 
 Denna dokumentation beskriver [!DNL Asset Compute Service] ämnen som hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod. Om du vill veta vad [!DNL Asset Compute Service]-erbjudandet är kan du läsa den här [introduktionen](introduction.md). Ta en titt på [vad tjänsten kan göra för dig](introduction.md#possible-use-cases-benefits).
 
-[!DNL Asset Compute Service] har stöd för konvertering av många filformat och kan integreras med många Adobe-tjänster. Se listan över [filformat och tjänster som stöds](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
-
-Versionsrelaterad information och den senaste informationen finns i [versionsinformationen](/help/release-notes.md).
+[!DNL Asset Compute Service] har stöd för konvertering av många filformat och kan integreras med många av Adobes tjänster. Se listan över [filformat och tjänster som stöds](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 Se en översikt över [de mikrotjänster för resurser som finns i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html) och hur du använder mikrotjänsterna i [!DNL Experience Manager].
 
