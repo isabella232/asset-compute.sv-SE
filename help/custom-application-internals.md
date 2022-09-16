@@ -2,9 +2,9 @@
 title: Förstå hur ett anpassat program fungerar
 description: Internt arbete i [!DNL Asset Compute Service] för att förstå hur det fungerar.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
-source-git-commit: 07e87c57e57f18f4d6e34ca8529d5598b0b12f3d
+source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Nedan följer ett exempel på en anpassad begäran om programbearbetning.
 }
 ```
 
-The [!DNL Asset Compute Service] skickar begäranden om anpassad programåtergivning till det anpassade programmet. Den använder en HTTP-POST till den angivna program-URL:en, som är den skyddade webbåtgärds-URL:en från Project App Builder. Alla förfrågningar använder HTTPS-protokollet för att maximera datasäkerheten.
+The [!DNL Asset Compute Service] skickar begäranden om anpassad programåtergivning till det anpassade programmet. Den använder en HTTP-POST till den angivna program-URL:en, som är den skyddade webbåtgärds-URL:en från App Builder. Alla förfrågningar använder HTTPS-protokollet för att maximera datasäkerheten.
 
 The [asset compute SDK](https://github.com/adobe/asset-compute-sdk#adobe-asset-compute-worker-sdk) som används av ett anpassat program hanterar HTTP-POSTENS begäran. Det hanterar också nedladdning av källan, överföring av återgivningar, sändning [!DNL Adobe I/O] händelser och felhantering.
 

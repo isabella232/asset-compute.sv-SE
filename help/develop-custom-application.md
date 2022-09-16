@@ -2,9 +2,9 @@
 title: Utveckla för [!DNL Asset Compute Service]
 description: Skapa anpassade program med [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: a50a3bdb520cbe608c5710716df80ac6e3b486e5
+source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ Innan du börjar utveckla ett anpassat program:
 
 Se till att du har [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) installeras lokalt.
 
-1. Om du vill skapa ett anpassat program [skapa ett App Builder-projekt](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Om du vill göra det kör du `aio app init <app-name>` i terminalen.
+1. Om du vill skapa ett anpassat program [skapa ett App Builder-projekt](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli). Om du vill göra det kör du `aio app init <app-name>` i terminalen.
 
-   Om du inte redan har loggat in uppmanas du att logga in i [Adobe Developer Console](https://console.adobe.io/) med din Adobe ID. Se [här](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#3-signing-in-from-cli) om du vill ha mer information om hur du loggar in från klippet.
+   Om du inte redan har loggat in uppmanas du att logga in i [Adobe Developer Console](https://console.adobe.io/) med din Adobe ID. Se [här](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#3-signing-in-from-cli) om du vill ha mer information om hur du loggar in från klippet.
 
-   Adobe rekommenderar att du loggar in. Om du har problem följer du instruktionerna [för att skapa en app utan att logga in](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   Adobe rekommenderar att du loggar in. Om du har problem följer du instruktionerna [för att skapa en app utan att logga in](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 
 1. När du har loggat in följer du instruktionerna i CLI och väljer `Organization`, `Project`och `Workspace` som ska användas för programmet. Välj det projekt och den arbetsyta du skapade när du skapade [konfigurera miljön](setup-environment.md). När du uppmanas `Which extension point(s) do you wish to implement ?`, se till att markera `DX Asset Compute Worker`:
 
@@ -62,7 +62,7 @@ Se till att du har [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) inst
 
 1. Följ resten av instruktionerna och öppna det nya programmet i Visual Studio Code (eller din favoritkodredigerare). Den innehåller ställningar och exempelkod för ett anpassat program.
 
-   Läs här om [huvudkomponenter i en App Builder-app](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#5-anatomy-of-a-project-firefly-application).
+   Läs här om [huvudkomponenterna i en App Builder-app](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#5-anatomy-of-an-app-builder-application).
 
    Mallprogrammet utnyttjar vår [asset compute SDK](https://github.com/adobe/asset-compute-sdk#asset-compute-sdk) för överföring, hämtning och samordning av programåtergivningar så att utvecklare bara behöver implementera den anpassade programlogiken. Innanför `actions/<worker-name>` mapp, `index.js` där du ska lägga till den anpassade programkoden.
 
