@@ -2,9 +2,9 @@
 title: Utveckla för [!DNL Asset Compute Service]
 description: Skapa anpassade program med [!DNL Asset Compute Service].
 exl-id: a0c59752-564b-4bb6-9833-ab7c58a7f38e
-source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1618'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Se till att du har [[!DNL Adobe I/O] CLI](https://github.com/adobe/aio-cli) inst
    $ aio app init <app-name>
    Retrieving information from [!DNL Adobe I/O] Console.
    ? Select Org My Adobe Org
-   ? Select Project MyFireflyProject
+   ? Select Project MyAdobe Developer App BuilderProject
    ? Which extension point(s) do you wish to implement ? (Press <space> to select, <a>
    to toggle all, <i> to invert selection)
    ❯◯ DX Experience Cloud SPA
@@ -100,7 +100,7 @@ Lägg till följande autentiseringsuppgifter för utvecklingsverktyget i ENV-fil
 1. Hämta filen från Adobe Developer Console. Gå till projektets rot och klicka på &quot;Hämta alla&quot; i det övre högra hörnet. Filen hämtas med `<namespace>-<workspace>.json` som filnamn. Gör något av följande:
 
    * Byt namn på filen som `console.json` och flytta den i projektets rot.
-   * Du kan också lägga till den absoluta sökvägen till JSON-filen för integrering av Adobe Developer Console. Detta är detsamma [`console.json`](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) fil som hämtas till din projektarbetsyta.
+   * Du kan också lägga till den absoluta sökvägen till JSON-filen för integrering av Adobe Developer Console. Detta är detsamma [`console.json`](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user) fil som hämtas till din projektarbetsyta.
 
       ```conf
       ASSET_COMPUTE_INTEGRATION_FILE_PATH=

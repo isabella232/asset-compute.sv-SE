@@ -2,9 +2,9 @@
 title: Ange den utvecklingsmiljö som krävs för [!DNL Asset Compute Service]
 description: Konfigurera utvecklarmiljö för [!DNL Asset Compute Service] för att börja skapa och testa anpassad kod.
 exl-id: 91c12889-01d8-4757-9bdd-f73c491cd9d5
-source-git-commit: 2b690ce37c0bac58abcb745e0b82018541434659
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 Så här skapar du en konfiguration som du kan utveckla för [!DNL Asset Compute Service], följer dessa krav och instruktioner.
 
-1. [Hämta åtkomst och autentiseringsuppgifter](https://www.adobe.io/project-firefly/docs/getting_started/#acquire-access-and-credentials) for [!DNL Project Firefly].
+1. [Hämta åtkomst och autentiseringsuppgifter](https://developer.adobe.com/app-builder/docs/getting_started/#acquire-access-and-credentials) for [!DNL Adobe Developer App Builder].
 
-1. [Konfigurera den lokala miljön](https://www.adobe.io/project-firefly/docs/getting_started/#local-environment-set-up) och de verktyg som krävs.
+1. [Konfigurera den lokala miljön](https://developer.adobe.com/app-builder/docs/getting_started/#local-environment-set-up) och de verktyg som krävs.
 
 1. Några andra verktyg som hjälper dig att komma igång smidigt är:
 

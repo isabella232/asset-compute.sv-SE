@@ -1,10 +1,10 @@
 ---
 title: Introduktion till [!DNL Asset Compute Service]
-description: '"[!DNL Asset Compute Service] är en molnbaserad resurshanteringstjänst som minskar komplexiteten och förbättrar skalbarheten."'
+description: "[!DNL Asset Compute Service] är en molnbaserad resurshanteringstjänst som minskar komplexiteten och förbättrar skalbarheten."
 exl-id: f8c89f65-5a94-44f3-aaac-4612ae291101
-source-git-commit: 93d3b407c8875888f03bec673d0a677a3205cfbb
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 [!DNL Asset Compute Service] är en skalbar och utbyggbar tjänst i [!DNL Adobe Experience Cloud] för att bearbeta digitalt material. Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata samt arkiv.
 
-Utvecklare kan plugin-program för anpassade resurser (kallas även anpassade arbetare) för att hantera anpassade användningsfall. Tjänsten fungerar på [!DNL Adobe I/O] runtime. Den kan utökas genom [!DNL Project Firefly] headless-appar skrivna i Node.js. Dessa kan utföra anpassade åtgärder som att anropa externa API:er för att utföra bildåtgärder eller utnyttja [!DNL Adobe Sensei] support.
+Utvecklare kan plugin-program för anpassade resurser (kallas även anpassade arbetare) för att hantera anpassade användningsfall. Tjänsten fungerar på [!DNL Adobe I/O] runtime. Den kan utökas genom [!DNL Adobe Developer App Builder] headless-appar skrivna i Node.js. Dessa kan utföra anpassade åtgärder som att anropa externa API:er för att utföra bildåtgärder eller utnyttja [!DNL Adobe Sensei] support.
 
-[!DNL Project Firefly] är ett ramverk för att bygga och driftsätta anpassade webbapplikationer på [!DNL Adobe I/O] runtime för att utöka Adobe Experience Cloud lösningar. För att skapa anpassade program kan utvecklarna utnyttja [!DNL React Spectrum] (Adobe’s UI toolkit), skapa mikrotjänster, skapa anpassade händelser och samordna API:er. Se [dokumentation om Project Fire](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
+[!DNL Adobe Developer App Builder] är ett ramverk för att bygga och driftsätta anpassade webbapplikationer på [!DNL Adobe I/O] runtime för att utöka Adobe Experience Cloud lösningar. För att skapa anpassade program kan utvecklarna utnyttja [!DNL React Spectrum] (Adobe’s UI toolkit), skapa mikrotjänster, skapa anpassade händelser och samordna API:er. Se [dokumentation för Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview/).
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Du kan använda [!DNL Asset Compute] webbtjänst för att generera miniatyrbilde
 >[!MORELIKETHIS]
 >
 >* [Översikt över bearbetning av resurser med hjälp av mikrotjänster på [!DNL Adobe Experience Manager] som [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html).
->* [Dokumentation om Project Fire](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html).
+>* [Dokumentation för Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview).
 >* [Filformat som kan bearbetas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html).
 
 

@@ -2,9 +2,9 @@
 title: Distribuera [!DNL Asset Compute Service] anpassat program
 description: Distribuera [!DNL Asset Compute Service] anpassat program.
 exl-id: a68d4f59-8a8f-43b2-8bc6-19320ac8c9ef
-source-git-commit: 129651ba432b75703bc27baa7081da60302f828d
+source-git-commit: 50f69e16772cee7f79a812f2b86f0ef0221db369
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Om du vill hämta samma URL utan att distribuera om programmet använder du [`ai
 
 Använd URL:en i en [Bearbetar profil i [!DNL Experience Manager] som [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/asset-microservices-configure-and-use.html) integrera applikationen med [!DNL Experience Manager] som [!DNL Cloud Service].
 
-Kontrollera att ditt App Builder-projekt och din arbetsyta motsvarar [!DNL Experience Manager] som [!DNL Cloud Service] miljö där du vill använda åtgärden. Den har olika miljöer för utveckling, staging och produktion. Du kan verifiera miljön genom att kontrollera `AIO_runtime_*` inloggningsuppgifter som definieras i ENV-filen i roten för Firefoly-programmet. Till exempel för att distribuera till en `Stage` arbetsytan `AIO_runtime_namespace` har formatet `xxxxxx_xxxxxxxxx_stage`. Integrera med [!DNL Experience Manager] som [!DNL Cloud Service] Produktionsmiljö, använd program-URL:er från din Firefoly `Production` arbetsyta.
+Kontrollera att ditt App Builder-projekt och din arbetsyta motsvarar [!DNL Experience Manager] som [!DNL Cloud Service] miljö där du vill använda åtgärden. Den har olika miljöer för utveckling, staging och produktion. Du kan verifiera miljön genom att kontrollera `AIO_runtime_*` autentiseringsuppgifter som definieras i ENV-filen i roten av ditt Adobe Developer App Builder-program. Till exempel för att distribuera till en `Stage` arbetsytan `AIO_runtime_namespace` har formatet `xxxxxx_xxxxxxxxx_stage`. Integrera med [!DNL Experience Manager] som [!DNL Cloud Service] Produktionsmiljö, använd program-URL:er från Adobe Developer App Builder `Production` arbetsyta.
 
 >[!CAUTION]
 >

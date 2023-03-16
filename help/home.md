@@ -1,17 +1,17 @@
 ---
-title: '"[!DNL Adobe Asset Compute Service] Användarhandbok"'
+title: "[!DNL Adobe Asset Compute Service] Användarhandbok"
 description: Dokumentationen innehåller [!DNL Asset Compute Service] uppgifter som introduktion, hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod.
 exl-id: 5acf87d1-a391-4802-bfce-e367fc8564df
-source-git-commit: 93d3b407c8875888f03bec673d0a677a3205cfbb
+source-git-commit: 2dde177933477dc9ac2ff5a55af1fd2366e18359
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
 
 # Om [!DNL Asset Compute Service]
 
-[!DNL Asset Compute Service] är en skalbar och utbyggbar tjänst i Adobe Experience Cloud för att bearbeta digitalt material. Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata, arkiv med mera. Utvecklare kan plugin-program (kallas även egna arbetare) för att hantera anpassade användningsfall som skapats med [Project Fire](https://www.adobe.io/apis/experienceplatform/project-firefly/docs.html) och körs utan server [[!DNL Adobe I/O] Körning](https://www.adobe.io/apis/experienceplatform/runtime.html).
+[!DNL Asset Compute Service] är en skalbar och utbyggbar tjänst i Adobe Experience Cloud för att bearbeta digitalt material. Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrer, extraherad text och metadata, arkiv med mera. Utvecklare kan plugin-program (kallas även egna arbetare) för att hantera anpassade användningsfall som skapats med [Adobe Developer App Builder](https://developer.adobe.com/app-builder/docs/overview) och körs utan server [[!DNL Adobe I/O] Körning](https://www.adobe.io/apis/experienceplatform/runtime.html).
 
 Dokumentationen innehåller [!DNL Asset Compute Service] ämnen som att utveckla, hantera, distribuera och felsöka din egen kod. För att veta vad [!DNL Asset Compute Service] erbjudandet är, se detta [introduktion](introduction.md). Checka ut [vad tjänsten kan göra för dig](introduction.md#possible-use-cases-benefits).
 
