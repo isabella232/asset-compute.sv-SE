@@ -2,9 +2,9 @@
 title: Förstå hur ett anpassat program fungerar
 description: Internt arbete i [!DNL Asset Compute Service] för att förstå hur det fungerar.
 exl-id: a3ee6549-9411-4839-9eff-62947d8f0e42
-source-git-commit: a121b48d480b45405259c2061ac86b9ab46b89cb
+source-git-commit: 2af710443cdc2e5e25e105eca6e779eb58631ae9
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Använd följande bild för att förstå hela arbetsflödet när en digital resurs bearbetas med ett anpassat program av en klient.
 
-![Anpassat arbetsflöde för program](assets/customworker.png)
+![Anpassat arbetsflöde för program](assets/customworker.svg)
 
 *Bild: Steg som ska användas för att bearbeta en resurs med [!DNL Asset Compute Service].*
 
