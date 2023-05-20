@@ -1,11 +1,11 @@
 ---
-title: '"[!DNL Asset Compute Service] HTTP API"'
-description: '"[!DNL Asset Compute Service] HTTP API för att skapa anpassade program."'
+title: "[!DNL Asset Compute Service] HTTP API"
+description: "[!DNL Asset Compute Service] HTTP API för att skapa anpassade program."
 exl-id: 4b63fdf9-9c0d-4af7-839d-a95e07509750
 source-git-commit: 93d3b407c8875888f03bec673d0a677a3205cfbb
 workflow-type: tm+mt
 source-wordcount: '2906'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -115,7 +115,7 @@ HTTP-statuskoderna är:
 
 * **401 Obehörig**: inträffar när begäran inte är giltig [autentisering](#authentication-and-authorization). Ett exempel kan vara en ogiltig åtkomsttoken eller en ogiltig API-nyckel.
 
-* **403 Förbjuden**: inträffar när begäran inte är giltig [auktorisation](#authentication-and-authorization). Ett exempel kan vara en giltig åtkomsttoken, men Adobe Developer Console-projektet (teknikkonto) prenumererar inte på alla nödvändiga tjänster.
+* **403 Förbjuden**: inträffar när begäran inte är giltig [auktorisation](#authentication-and-authorization). Ett exempel kan vara en giltig åtkomsttoken, men Adobe Developer Console-projektet (tekniskt konto) prenumererar inte på alla nödvändiga tjänster.
 
 * **429 För många begäranden**: inträffar när systemet överläses av den här klienten eller på annat sätt. Klienter bör försöka igen med en [exponentiell säkerhetskopiering](https://en.wikipedia.org/wiki/Exponential_backoff). Brödtexten är tom.
 * **4xx-fel**: När det fanns något annat klientfel och registreringen misslyckades. Vanligtvis returneras ett JSON-svar som detta, men det garanteras inte för alla fel:
@@ -148,7 +148,7 @@ Detta API-anrop avregistrerar ett [!DNL Asset Compute] klient. Efter detta kan d
 | Bana | `/unregister` |
 | Sidhuvud `Authorization` | Alla [auktoriseringsrelaterade rubriker](#authentication-and-authorization). |
 | Sidhuvud `x-request-id` | Valfritt, kan anges av klienter för att ge en unik slutidentifierare av bearbetningsförfrågningar mellan olika system. |
-| Begärandetext | Tomt. |
+| Begärandetext | Tom. |
 
 ### Avregistrera svar {#unregister-response}
 
@@ -171,7 +171,7 @@ Statuskoderna är:
 
 * **401 Obehörig**: inträffar när begäran inte är giltig [autentisering](#authentication-and-authorization). Ett exempel kan vara en ogiltig åtkomsttoken eller en ogiltig API-nyckel.
 
-* **403 Förbjuden**: inträffar när begäran inte är giltig [auktorisation](#authentication-and-authorization). Ett exempel kan vara en giltig åtkomsttoken, men Adobe Developer Console-projektet (teknikkonto) prenumererar inte på alla nödvändiga tjänster.
+* **403 Förbjuden**: inträffar när begäran inte är giltig [auktorisation](#authentication-and-authorization). Ett exempel kan vara en giltig åtkomsttoken, men Adobe Developer Console-projektet (tekniskt konto) prenumererar inte på alla nödvändiga tjänster.
 
 * **404 Hittades inte**: inträffar när det inte finns någon aktuell registrering för de angivna autentiseringsuppgifterna.
 
@@ -236,7 +236,7 @@ De tillgängliga fälten är:
 |--------------|----------|-------------|---------|
 | `source` | `string` | URL för källresursen som ska bearbetas. Valfritt baserat på begärt återgivningsformat (t.ex. `fmt=zip`). | `"http://example.com/image.jpg"` |
 | `source` | `object` | Beskriver källresursen som ska bearbetas. Se beskrivning av [Källobjektfält](#source-object-fields) nedan. Valfritt baserat på begärt återgivningsformat (t.ex. `fmt=zip`). | `{"url": "http://example.com/image.jpg", "mimeType": "image/jpeg" }` |
-| `renditions` | `array` | Återgivningar som ska genereras från källfilen. Varje återgivningsobjekt har stöd för [återgivningsinstruktion](#rendition-instructions). Krävs. | `[{ "target": "https://....", "fmt": "png" }]` |
+| `renditions` | `array` | Återgivningar som ska genereras från källfilen. Varje återgivningsobjekt har stöd för [återgivningsinstruktion](#rendition-instructions). Obligatoriskt. | `[{ "target": "https://....", "fmt": "png" }]` |
 
 The `source` kan vara en `<string>` som ses som en URL eller som kan vara en `<object>` med ytterligare ett fält. Följande varianter är lika:
 
@@ -254,7 +254,7 @@ The `source` kan vara en `<string>` som ses som en URL eller som kan vara en `<o
 
 | Namn | Typ | Beskrivning | Exempel |
 |-----------|----------|-------------|---------|
-| `url` | `string` | URL för källresursen som ska bearbetas. Krävs. | `"http://example.com/image.jpg"` |
+| `url` | `string` | URL för källresursen som ska bearbetas. Obligatoriskt. | `"http://example.com/image.jpg"` |
 | `name` | `string` | Namn på källresursfil. Filtillägget i namnet kan användas om det inte går att identifiera någon MIME-typ. Har företräde framför filnamn i URL-sökväg eller filnamn i `content-disposition` den binära resursens huvud. Standardvärdet är &quot;file&quot;. | `"image.jpg"` |
 | `size` | `number` | Källresursens filstorlek i byte. Har företräde framför `content-length` den binära resursens huvud. | `10234` |
 | `mimetype` | `string` | MIME-typ för källresursfil. Har företräde framför `content-type` den binära resursens huvud. | `"image/jpeg"` |
@@ -320,7 +320,7 @@ Statuskoder:
    ```
 
 * **401 Obehörig**: När begäran inte är giltig [autentisering](#authentication-and-authorization). Ett exempel kan vara en ogiltig åtkomsttoken eller en ogiltig API-nyckel.
-* **403 Förbjuden**: När begäran inte är giltig [auktorisation](#authentication-and-authorization). Ett exempel kan vara en giltig åtkomsttoken, men Adobe Developer Console-projektet (teknikkonto) prenumererar inte på alla nödvändiga tjänster.
+* **403 Förbjuden**: När begäran inte är giltig [auktorisation](#authentication-and-authorization). Ett exempel kan vara en giltig åtkomsttoken, men Adobe Developer Console-projektet (tekniskt konto) prenumererar inte på alla nödvändiga tjänster.
 * **429 För många begäranden**: När systemet är överbelastat av den här klienten eller i allmänhet. Klienterna kan försöka igen med en [exponentiell säkerhetskopiering](https://en.wikipedia.org/wiki/Exponential_backoff). Brödtexten är tom.
 * **4xx-fel**: När det fanns något annat klientfel. Vanligtvis returneras ett JSON-svar som detta, men det garanteras inte för alla fel:
 
@@ -376,7 +376,7 @@ Det här är de tillgängliga alternativen för `renditions` array in [/process]
 | `fmt` | `string` | Målformatet för återgivningarna kan också `text` för textextrahering och `xmp` för att extrahera XMP metadata som xml. Se [format som stöds](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/file-format-support.html) | `png` |
 | `worker` | `string` | URL för en [anpassat program](develop-custom-application.md). Måste vara en `https://` URL. Om det här fältet finns skapas återgivningen av ett anpassat program. Alla andra inställda återgivningsfält används sedan i det anpassade programmet. | `"https://1234.adobeioruntime.net`<br>`/api/v1/web`<br>`/example-custom-worker-master/worker"` |
 | `target` | `string` | URL som den genererade återgivningen ska överföras till med HTTP PUT. | `http://w.com/img.jpg` |
-| `target` | `object` | Multipart-försignerad URL-överföringsinformation för den genererade återgivningen. Det här är för [AEM/Oak Direct Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) med [uppladdning av flera delar, beteende](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>fält:<ul><li>`urls`: array med strängar, en för varje försignerad del-URL</li><li>`minPartSize`: den minsta storleken som ska användas för en del = url</li><li>`maxPartSize`: maxstorleken som ska användas för en del = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
+| `target` | `object` | Multipart-försignerad URL-överföringsinformation för den genererade återgivningen. Det här är för [AEM/Oak Direct Binary Upload](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html) med [uppladdning av flera delar, beteende](https://jackrabbit.apache.org/oak/docs/apidocs/org/apache/jackrabbit/api/binary/BinaryUpload.html).<br>Fält:<ul><li>`urls`: array med strängar, en för varje försignerad del-URL</li><li>`minPartSize`: den minsta storleken som ska användas för en del = url</li><li>`maxPartSize`: maxstorleken som ska användas för en del = url</li></ul> | `{ "urls": [ "https://part1...", "https://part2..." ], "minPartSize": 10000, "maxPartSize": 100000 }` |
 | `userData` | `object` | Valfritt reserverat utrymme som styrs av klienten och skickas som det är till renderingshändelser. Tillåter klienter att lägga till anpassad information för att identifiera renderingshändelser. Får inte ändras eller förlitas i anpassade program, eftersom kunderna kan ändra detta när som helst. | `{ ... }` |
 
 ### Återgivningsspecifika fält {#rendition-specific-fields}

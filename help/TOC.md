@@ -5,7 +5,7 @@ solution: Experience Manager, Experience Manager Assets
 type: Documentation
 role: Developer
 user-guide-title: asset compute Service Guide
-user-guide-description: Den här dokumentationen behandlar [!DNL Asset Compute Service] uppgifter som hur du utvecklar, hanterar, distribuerar och felsöker din anpassade kod.
+user-guide-description: Dokumentationen innehåller [!DNL Asset Compute Service] uppgifter som att utveckla, hantera, distribuera och felsöka din egen kod.
 breadcrumb-title: asset compute Service Guide
 source-git-commit: a2460a0719f8c585ed72e44c904aa0df33301032
 workflow-type: tm+mt
@@ -29,6 +29,6 @@ ht-degree: 10%
    + [Utveckla ett anpassat program](develop-custom-application.md)
    + [Testa ett anpassat program](test-custom-application.md)
    + [Distribuera ett anpassat program](deploy-custom-application.md)
-   + [Integrera och använd  [!DNL Experience Manager] som [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)
+   + [Integrera och använd i [!DNL Experience Manager] som [!DNL Cloud Service]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/asset-microservices-overview.html)
 + [Felsök](troubleshooting.md)
 + [Bidra till öppen källkodsprojektet](contribute-to-compute-service.md)
