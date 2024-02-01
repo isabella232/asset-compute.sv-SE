@@ -11,9 +11,10 @@ mini-toc-levels: 2
 feature-set: Experience Manager Assets
 git-repo: https://github.com/AdobeDocs/asset-compute.sv-SE
 index: y
-source-git-commit: 66bad4afdc7b08e1e91418ec320b061e47c3683d
+recommendations: noDisplay
+source-git-commit: cb87ab6081d53610acf27419fa5103b3ae1ead03
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
@@ -31,7 +32,7 @@ Filen metadata.md innehåller metadata på postnivå som skickas till TOC.md-fil
 | getting-started-url | Länk till sidan Komma igång |
 | tutorials-url | Länka till videosjälvstudiekurser - antingen hjälpstudiekurser eller självstudiekurser på engelska |
 | mini-toc-nivåer | Anger antalet rubriknivåer som visas i den högra listen. standard är 2 |
-| git-repo | Anger platsen för den överordnad rapporten för intern användning |
+| git-repo | Anger platsen för huvudrapporten för intern användning |
 
 I filen TOC.md
 
